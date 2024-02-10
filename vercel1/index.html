@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinos do WhatsApp</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/js/all.min.js">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+<body>
+   
+    <div class="container">
+        <div class="background-image">
+            <img src="./images/castle.jpeg" alt="Castelo medieval">
+        </div>
+    </div>
+    
+    <header>
+        <div class="container">
+            <h1>Reinos do WhatsApp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#index.html">Início</a></li>
+                <li><a href="#description" title="Ir para a seção de Descrição">Descrição</a></li>
+                <li><a href="#characters" title="Ir para a seção de Personagens">Personagens</a></li>
+                <li><a href="#missions" title="Ir para a seção de Missões">Missões</a></li>
+                <li><a href="#store" title="Ir para a seção de Loja">Loja</a></li>
+                <li><a href="#battles" title="Ir para a seção de Batalhas">Batalhas</a></li>
+                <li><a href="#guilds" title="Ir para a seção de Guildas">Guildas</a></li>
+                <li><a href="#comments" title="Ir para a Deixe seu comentário">Comentário</a></li>
+                <li><a href="#profile" title="Ir para a seção de Perfil">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="description" class="description content-section">
+        <div class="container">
+            <h2>Descrição</h2>
+            <p>
+                Bem-vindo aos Reinos do WhatsApp, onde aventuras épicas ganham vida através das palavras. Em nosso site de RPG de texto, você assumirá o papel de personagens lendários em mundos de fantasia deslumbrantes. Aqui, a magia e a imaginação se entrelaçam enquanto você explora reinos mágicos, embarca em missões perigosas e enfrenta desafios épicos. Tudo isso acontece em tempo real e diretamente dentro do aplicativo WhatsApp, tornando cada interação mais imersiva do que nunca.
+            </p>
+        </div>
+    </section>
+    <section id="characters" class="characters">
+        <div class="container">
+            <h2>Personagens</h2>
+            <p>Bem-vindo à seção de personagens! Aqui, você pode explorar os heróis e heroínas dos nossos mundos de fantasia. Cada personagem possui sua própria história, raça e classe, e está pronto para embarcar em aventuras épicas.</p>
+
+            <div class="character-carousel">
+                <div class="character">
+                    <img src="./images/Legolas_LoranDeSore.webp" alt="Personagem Legolas">
+                    <h3>Legolas</h3>
+                    <p>Raça: Elfo</p>
+                    <p>Classe: Arqueiro</p>
+                    <button class="see-button" onclick="redirecionarParaPagina('pagina_legolas.html')">Ver</button>
+                </div>
+                <div class="character">
+                    <img src="./images/78b82dad4a8484e8e8eddef281ee6d82.gif" alt="Personagem 2">
+                    <h3>Merlin</h3>
+                    <p>Raça: Humano</p>
+                    <p>Classe: Mago</p>
+                    <button class="see-button" onclick="redirecionarParaPagina('pagina_merlin.html')">Ver</button>
+                </div>
+                <div class="character">
+                    <img src="./images/139964347_233841871568948_546897853677895685_n.jpg" alt="Loki">
+                    <h3>Loki</h3>
+                    <p>Raça: Aesir</p>
+                    <p>Classe: Trapaceiro</p>
+                    <button class="see-button" onclick="redirecionarParaPagina('pagina_loki.html')">Ver</button>
+                </div>
+                <div class="character">
+                    <img src="./images/hades.jpg" alt="Hades">
+                    <h3>Hades</h3>
+                    <p>Raça: Deus Grego</p>
+                    <p>Classe: Senhor do Submundo</p>
+                    <button class="see-button" onclick="redirecionarParaPagina('pagina_hades.html')">Ver</button>
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+            <script>
+                $(document).ready(function(){
+                    $('.character-carousel').slick({
+                        dots: true,
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 2,
+                        adaptiveHeight: true,
+                        autoplay: true, /* Adiciona autoplay */
+                        autoplaySpeed: 3000 /* Define a velocidade do autoplay em milissegundos */
+                    });
+                });
+
+                function redirecionarParaPagina(pagina) {
+                    window.location.href = pagina;
+                }
+            </script>
+
+            <a href="lista_de_personagens.html">Clique aqui para acessar a lista completa de personagens</a>
+        </div>
+    </section>
+        <section class="missions" id="missions">
+            <div class="container">
+                <h2>Missões</h2>
+                <p>
+                    Bem-vindo à seção de Missões! Aqui, você encontrará uma variedade de desafios emocionantes e aventuras esperando por você. 
+                    Prepare-se para embarcar em jornadas épicas e ganhar recompensas incríveis.
+                </p>
+                 <a href="lista_de_missoes.html">Clique aqui para acessar a lista de missões</a>
+            </div>
+        </section>
+        <section class="store" id="store">
+            <div class="container">
+                <h2>Loja</h2>
+                <p>
+                    Bem-vindo à nossa Loja! Aqui estão alguns dos produtos que oferecemos para aprimorar suas aventuras nos Reinos de WhatsApp:
+                </p>
+    
+                <div class="store-carousel">
+                    <div class="product">
+                        <img src="./images/Espada Magica.jpeg" alt="Espada Mágica">
+                        <h3>Espada Mágica</h3>
+                        <p>Uma espada encantada com poderes mágicos.</p>
+                        <p>Preço: $100</p>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Pocao de Cura.jpg" alt="Poção de Cura">
+                        <h3>Poção de Cura</h3>
+                        <p>Restaura sua saúde instantaneamente.</p>
+                        <p>Preço: $50</p>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Varinha Mágica.avif" alt="Varinha Mágica">
+                        <h3>Varinha Mágica</h3>
+                        <p>Uma varinha que lança feitiços poderosos.</p>
+                        <p>Preço: $120</p>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                </div>
+    
+                <a href="store.html" class="store-link">Clique aqui para acessar a lista completa de produtos</a>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.store-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 2,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        });
+    </script>
+        </section>
+        <section class="battles" id="battles">
+            <div class="container">
+                <h2>Batalhas</h2>
+                <p>
+                    Prepare-se para emocionantes batalhas nos Reinos de WhatsApp! Desafie inimigos poderosos, conquiste territórios e ganhe recompensas épicas em nossos campos de batalha. Sua coragem e habilidades serão testadas ao máximo.
+                </p>
+                <a href="battles.html">Clique aqui para acessar a página de Batalhas</a>
+            </div>
+        </section>
+        <section class="guilds" id="guilds">
+            <div class="container">
+                <h2>Guildas</h2>
+                <p>
+                    Bem-vindo à seção de Guildas! Junte-se a uma guilda, faça parte de uma comunidade poderosa e enfrente desafios épicos com aliados confiáveis. Explore as guildas disponíveis e escolha a que melhor se adapta ao seu estilo de jogo.
+                </p>
+                <a href="guilds.html">Clique aqui para acessar a página de Guildas</a>
+            </div>
+        </section>
+        <section class="comments" id="comments">
+            <div class="container">
+                <h2>Deixe seu Comentário</h2>
+                <p>
+                    Queremos ouvir sua opinião! Deixe seu comentário abaixo sobre sua experiência nos Reinos de WhatsApp. Compartilhe suas aventuras, sugestões e feedback conosco.
+                </p>
+                <form action="processar_comentario.php" method="post" style="text-align: left";>
+                    <p><label for="nome" >Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                    </p>
+                    <label for="comentario">Comentário:</label>
+                    <textarea id="comentario" name="comentario" rows="4" required placeholder="Comentário"></textarea>
+                    
+                    <button type="submit" class="send-comment">Enviar Comentário</button>
+                </form>
+            </div>
+        </section>
+        <section class="profile" id="profile">
+            <div class="container">
+                <h2>Perfil</h2>
+                <p>
+                    Faça login para acessar seu perfil em Reinos do WhatsApp. Se você ainda não possui uma conta, pode se cadastrar através do link abaixo.
+                </p>
+                <form action="processar_login.php" method="post" style="text-align: left";>
+                    <div class="form-group">
+                        <label for="login">Login:</label>
+                        <input type="text" id="login" name="login" required placeholder="Login">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha";>Senha:</label>
+                        <input type="password" id="senha" name="senha" required placeholder="Senha">
+                    </div>
+                    <button type="submit" class="enter" >Entrar</button>
+                    <h6><p  style="text-align: left;">Esqueceu a senha? <a href="redefinir_senha.html">Redefina-a!</a></p></h6>
+                </form>
+                <p  style="text-align: left;">Não possui conta? <a href="cadastro.html">Cadastre-se!</a></p>
+            </div>
+        </section>
+        
+        
+        
+    </body>
+    </html>
+
+
+
+                    

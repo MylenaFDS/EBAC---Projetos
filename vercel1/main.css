@@ -1,0 +1,661 @@
+header,
+section h2{
+    font-family: 'Uncial Antiqua', cursive;
+}
+
+body{
+    font-family: 'Uncial Antiqua', cursive;
+}
+header{
+    padding: 16px 0;
+    
+    color: #800000;
+}
+
+header h1,
+section h2{
+    font-weight: bold;
+    color:#d62148c5
+}
+
+
+
+.container{
+    max-width: 1288px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header nav li{
+    display: inline;
+    margin-left: 16px 0;
+    margin-right: 18px;
+    font-size: 18px;
+}
+
+header nav li a{
+    color: #ffd900a2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header, nav, section, footer {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    padding: 16px 0;
+    font-family: 'Uncial Antiqua', cursive;
+    color: #800000;
+}
+
+section .container{
+    align-items: flex-start;
+}
+
+section {
+    padding: 24px 0;
+    color: #ffd900a2;
+}
+
+section h2{
+    margin-bottom: 16px;
+    
+}
+
+
+section p{
+    margin-bottom: 8px;
+}
+
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+}
+
+header,
+section {
+    
+    padding: 24px;
+    border-radius: 8px;
+    margin: 16px auto;
+    max-width: 800px;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Distribui os elementos igualmente na horizontal */
+     /* Cor de fundo da barra de navegação */
+}
+
+nav li {
+    margin: 0;
+    list-style: none;
+}
+
+nav li a {
+    display: block;
+    padding: 5px; /* Espaçamento interno dos links */
+    text-decoration: none;
+    color: #ffd900a2;
+    transition: background-color 0.3s; /* Transição suave da cor de fundo */
+}
+
+nav li a:hover {
+    background-color: transparent; /* Cor de fundo ao passar o mouse */
+    color: #800000; /* Cor do texto ao passar o mouse */
+}
+
+
+/* Estilos para a seção Personagens */
+.characters {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+
+/* Estilos para a lista de personagens */
+.character-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+}
+
+
+/* Estilos para cada personagem individual */
+.character {
+   
+   
+    border-radius: 10px;
+    width: calc(25% - 20px); /* Define a largura de cada item */
+    text-align: center;
+    
+}
+
+.characters img {
+    max-width: 100%;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto; /* Adiciona margem automática para centralizar */
+    padding: 16px;
+    
+    
+}
+
+.slick-prev, .slick-next {
+    display: none !important;
+}
+
+.see-button,.buy-button,.send-comment,.enter,.create-an-account,.reset-password,.join-button {
+    background-color: #194619a2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Uncial Antiqua',cursive;
+}
+
+.see-button:hover,.buy-button:hover,.send-comment:hover,.enter:hover,.create-an-account:hover,.reset-password:hover,.join-button:hover {
+    background-color: #ff00eaa2;
+}
+
+.join-button{
+    text-decoration: none;
+}
+
+.character-flex-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuir os itens igualmente */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.section li a{
+    text-decoration: none;
+}
+
+/* Estilos para o link na seção Missões */
+.missions a {
+    display: block;  /* Transforma o link em um bloco para ocupar a largura total disponível */
+    margin-top: 20px;  /* Adiciona margem acima do link */
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+    
+}
+
+.characters a {
+    display: block;  /* Transforma o link em um bloco para ocupar a largura total disponível */
+    margin-top: 20px;  /* Adiciona margem acima do link */
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+
+.store img {
+    max-width: 100%;
+    height: 350px;
+    padding: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto; 
+}
+
+.store a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+.store-carousel {
+    width: 80%;
+    margin: auto;
+}
+.guilds a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+.battles a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+
+
+/* Estilos para alinhar os campos à esquerda */
+.comments .form-group {
+    text-align: left;
+    color: violet;
+}
+
+.comments label {
+    display: block;
+    margin-bottom: 6px;
+    
+}
+
+.comments input[type="text"],
+.comments textarea {
+    width: 100%;
+}
+
+.description:hover {
+    background-color:#ffd900a2 ; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor:pointer;
+}
+
+.characters p:hover,.characters .character:hover,.store .product:hover,.store p:hover,.characters a:hover,.store a:hover,.product:hover,.product-list a:hover,.guild-item:hover{
+    background-color: transparent; /* Cor de fundo ao passar o mouse sobre o personagem */
+    color: #800000; /* Cor do texto ao passar o mouse sobre o personagem */
+    cursor: pointer;
+    border-radius: 50px;
+    transform: scale(1.05); 
+    padding: 16px;
+}
+
+
+
+.missions:hover {
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.missions li{
+    list-style: none;
+}
+
+.battle-items li{
+        list-style: none;
+        padding: 20px;
+    }
+
+
+
+
+.battles:hover {
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.guilds:hover {
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.guild-item:hover {
+    background-color: #ffd900a2; /* Cor de fundo ao passar o mouse sobre a guilda isolada */
+    color: #800000; /* Cor do texto ao passar o mouse sobre a guilda isolada */
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.comments:hover {
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+.profile:hover {
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.profile a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+.profile:hover a{
+
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.battles:hover a{
+
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.characters a:hover {
+
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+    
+}
+
+.missions:hover a{
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.store:hover a{
+
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.guilds:hover a{
+
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.product {
+    width: 48%;  /* Define a largura de cada item */
+    margin-bottom: 20px;  /* Adiciona margem inferior para espaçamento entre os itens */
+    transition: transform 0.3s; 
+    cursor:pointer;
+}
+
+.product:hover {
+    transform: scale(1.05);  /* Aumenta um pouco o tamanho do item ao passar o mouse */
+    padding: 16px;
+}
+
+
+.product-list img{
+    height: 150px;
+}
+
+.product-items {
+    list-style: none;
+    padding: 0;
+    display: flex;  /* Altera o layout para flexível */
+    flex-wrap: wrap;  /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+    justify-content: space-between;  /* Distribui os itens igualmente na linha */
+
+}
+
+.product-items img{
+    border-radius: 50%;
+}
+
+.character-list img{
+    
+        width: 150px; /* Defina a largura desejada */
+        height: 150px; /* Defina a altura desejada */
+        /* Adicione outras propriedades CSS, se necessário */
+        
+    
+}
+
+.guilds:hover a{
+
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.registration a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+.registration:hover a{
+
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.registration:hover {
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.password-reset a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+.password-reset:hover a{
+
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.password-reset:hover {
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.character-page:hover{
+    background-color: transparent; /* Defina a cor desejada */
+    color:#FF0000; /* Vermelho puro */
+    ; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+  
+}
+
+.character-page img{
+
+    width: 500px; /* Defina a largura desejada */
+    height: 500px;
+    border-radius: 50%;
+}
+
+.character-page a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+
+.mission-details:hover{
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.mission-details img{
+
+    width: 500px; /* Defina a largura desejada */
+    height: 500px;
+
+}
+
+.mission-details a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+.battle-list:hover{
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.battle-list img{
+
+    width: 500px; /* Defina a largura desejada */
+    height: 500px;
+
+}
+
+.battle-list a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+.battle-details:hover{
+    background-color: #ffd900a2; /* Defina a cor desejada */
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.battle-details img{
+
+    width: 500px; /* Defina a largura desejada */
+    height: 500px;
+
+}
+
+.battle-details a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+.guild-item{
+    list-style: none;
+}
+
+.guild-list:hover{
+    
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+    
+}
+
+.guild-list img{
+
+    width: 500px; /* Defina a largura desejada */
+    height: 500px;
+
+}
+
+.guild-list a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+
+.product-list .product:hover{
+    background-color: #ffd900a2; 
+    color: #800000; /* Cor do texto (opcional, ajuste de acordo com suas necessidades) */
+    cursor: pointer;
+}
+
+.product-list a {
+    color: #ff00eaa2; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Uncial Antiqua', cursive; /* Fonte */
+    font-weight: bold; /* Peso da fonte */
+}
+.product h3:hover {
+    color: #800000; /* Cor desejada ao passar o mouse */
+    cursor: pointer;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    header {
+        /* Exemplo de estilo específico para header em tablet */
+        padding: 15px;
+    }
+
+    nav {
+        /* Exemplo de estilo específico para navegação em tablet */
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
+    }
+
+    .product {
+        width: 48%;
+    }
+}
+
+/* Layout Mobile (até 640px) */
+@media screen and (max-width: 640px) {
+    .about {
+        display: block;
+    }
+
+    nav {
+        /* Exemplo de estilo específico para navegação em mobile */
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #bc6628;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-hamburguer.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-hamburguer.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+

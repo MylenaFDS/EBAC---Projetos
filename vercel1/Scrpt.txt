@@ -1,0 +1,66 @@
+<script>
+        // Função para mostrar informações do personagem ao clicar em "Ver"
+        function mostrarInformacoes(personagem) {
+            alert(`Nome: ${personagem.nome}\nRaça: ${personagem.raca}\nClasse: ${personagem.classe}`);
+        }
+    
+        // Adicionar um evento de clique a todos os botões "Ver"
+        const botoesVer = document.querySelectorAll('.see-button');
+        botoesVer.forEach((botao, index) => {
+            botao.addEventListener('click', () => {
+                // Informações do personagem correspondente
+                const personagem = {
+                    nome: nomes[index],
+                    raca: racas[index],
+                    classe: classes[index]
+                };
+                mostrarInformacoes(personagem);
+            });
+        });
+    
+        // Dados dos personagens
+        const nomes = [
+            "Legolas",
+            "Merlin",
+            "Loki",
+            "Hades",
+            "Harry Potter",
+            "Katniss Everdeen",
+            "Frodo Bolseiro",
+            "Hermione Granger",
+            "Daemon Targaryen",
+            "Lara Croft",
+            "Aragorn",
+            "Mulher Maravilha"
+        ];
+    
+        const racas = [
+            "Elfo",
+            "Humano",
+            "Aesir",
+            "Deus Grego",
+            "Humano",
+            "Humano",
+            "Hobbit",
+            "Humano",
+            "Humano",
+            "Humano",
+            "Humano",
+            "Amazona"
+        ];
+    
+        const classes = [
+            "Arqueiro",
+            "Mago",
+            "Trapaceiro",
+            "Senhor do Submundo",
+            "Mago",
+            "Arqueiro",
+            "Viajante",
+            "Bruxa",
+            "Guerreiro",
+            "Aventureira",
+            "Rei",
+            "Heroína"
+        ];
+    </script>

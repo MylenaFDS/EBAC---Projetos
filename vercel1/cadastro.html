@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Reinos do WhatsApp</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/js/all.min.js">
+</head>
+<body>
+    <div class="container">
+        <div class="background-image"> <img src="./images/castle.jpeg" alt="Castelo medieval"></div>
+    </div>
+    <header>
+        <div class="container">
+            <h1>Reinos do WhatsApp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html" title="Ir para a seção de Descrição">Descrição</a></li>
+                <li><a href="lista_de_personagens.html" title="Ir para a seção de Personagens">Personagens</a></li>
+                <li><a href="missions" title="Ir para a seção de Missões">Missões</a></li>
+                <li><a href="store" title="Ir para a seção de Loja">Loja</a></li>
+                <li><a href="battles" title="Ir para a seção de Batalhas">Batalhas</a></li>
+                <li><a href="guilds" title="Ir para a seção de Guildas">Guildas</a></li>
+                <li><a href="index.html#comments" title="Ir para a Deixe seu comentário">Comentário</a></li>
+                <li><a href="index.html#profile" title="Ir para a seção de Perfil">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="registration" id="registration">
+        <div class="container">
+            <h2>Cadastro</h2>
+            <p>
+                Crie sua conta nos Reinos do WhatsApp para começar sua jornada épica! Preencha o formulário abaixo:
+            </p>
+            <form action="processar_cadastro.php" method="post" style="text-align: left">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu email">
+                </div>
+                <div class="form-group">
+                    <label for="login">Login:</label>
+                    <input type="text" id="login" name="login" required placeholder="Login">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required placeholder="Senha">
+                </div>
+                <div class="form-group">
+                    <label for="confirmar_senha">Confirmar Senha:</label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" required placeholder="Confirme sua senha">
+                </div>
+                <button type="submit" class="create-an-account">Criar Conta</button>
+            </form>
+            <p> Já possui uma conta? <a href="index.html#profile">Faça login</a></p>
+        </div>
+    </section>
+</body>
+</html>
