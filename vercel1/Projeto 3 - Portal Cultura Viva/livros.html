@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros - Cultura Viva</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+        }
+    
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            font-size: 2rem;
+        }
+        #carousel-romance .carousel-indicators,
+        #carousel-classicos .carousel-indicators,
+        #carousel-romance-epoca .carousel-indicators ,
+        #carousel-fantasia .carousel-indicators,
+        #carousel-suspense .carousel-indicators {
+    position: static !important;
+    margin-top: 10px;
+}
+
+#carousel-romance .carousel-indicators button,
+#carousel-classicos .carousel-indicators button,
+#carousel-romance-epoca .carousel-indicators button,
+#carousel-fantasia .carousel-indicators button,
+#carousel-suspense .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #c21496;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+#carousel-romance .carousel-indicators button.active,
+#carousel-classicos .carousel-indicators button .active,
+#carousel-romance-epoca .carousel-indicators button .active,
+#carousel-fantasia .carousel-indicators button .active,
+#carousel-suspense .carousel-indicators button .active {
+    background-color: #c21496;
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+    <div class="container">
+        <h1 class="navbar-brand m-0 section-title">Cultura Viva</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+            <ul class="nav nav-pills d-block d-md-flex">
+                <li class="nav-item fw-bold">
+                    <a href="index.html" class="nav-link">
+                        <i class="bi bi-house-door me-1"></i>
+                        Início
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="musicas.html" class="nav-link">
+                        <i class="bi bi-music-note me-1"></i>
+                        Música
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="livros.html" class="nav-link">
+                        <i class="bi bi-book me-1"></i>
+                        Livros
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="filmes.html" class="nav-link">
+                        <i class="bi bi-film me-1"></i>
+                        Filmes
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="index.html#fale-conosco" class="nav-link">
+                        <i class="bi bi-chat-left-text me-1"></i>
+                        Fale conosco
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-offset="0" tabindex="0">
+    <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="images/CulturaViva.png" alt="Foto do espaço cultural">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Musics.png" alt="Música">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Books.png" alt="Livros">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Movies.jpg" alt="Livros">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+        </div>
+    </div>
+    <section id="livros" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="images/Books.jpg" class="d-block w-100 rounded" alt="Livros">
+                </div>
+                <div class="col-md-7 mt-5 mt-md-0">
+                    <h2 class="section-title text-center mb-4">Livros</h2>
+                    <p>
+                        Bem-vindo à seção de livros do Cultura Viva. Aqui você encontrará uma variedade de títulos, sinopses e informações sobre onde comprar cada livro.
+                    </p>
+                    <p>
+                        Explore nossa coleção de obras literárias de diversos gêneros e autores. Desde clássicos atemporais até as últimas novidades, há algo para todos os gostos e interesses.
+                    </p>
+                    <p>
+                        Cada livro é acompanhado por uma sinopse detalhada que o ajudará a decidir qual história mergulhar. Além disso, fornecemos links para onde você pode adquirir cada livro, seja em livrarias físicas ou lojas online.
+                    </p>
+                    <p>
+                        Aprecie a leitura e deixe-se envolver por mundos fascinantes através das páginas dos nossos livros. Esta seção é projetada para enriquecer sua experiência cultural e inspirar novas aventuras literárias.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="classicos" class="pt-5 pb-5">
+        <div class="container">
+            <!-- Descrição e título da seção -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title text-center mb-4">Clássicos</h2>
+                    <p class="text-center">Explore os grandes clássicos da literatura em nossa coleção selecionada.</p>
+                </div>
+            </div>
+            
+            <!-- Carrossel de cards -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carousel-classicos" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Primeiro slide -->
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/O Morro dos Ventos Uivantes.jpg" class="card-img-top m-1" alt="O Morro dos Ventos Uivantes">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class=" card-body text-center m-2">
+                                                        <h5 class="card-title">O Morro dos Ventos Uivantes</h5>
+                                                        <p class="card-text mt-4">Obra-prima da literatura inglesa, uma narrativa poderosa e tragicamente bela de um amor proibido...
+                            
+                                                            Caro leitor, você está prestes a adentrar o inferno. Mas não hesite: a viagem valerá cada segundo. Essa é uma história de amor e obsessão. E de purgação, crueza, devastação. No centro dos acontecimentos estão a voluntariosa e irascível Catherine Earnshaw e seu irmão adotivo Heathcliff. Rude nos modos e afetos, humilhado e rejeitado, ele aprende a odiar; mas com Catherine desenvolve uma relação de simbiose, paixão e também perversidade.
+                                                            
+                                                            Nada destruirá a essência desse laço – mas quando ela se casa com outro homem, por convenções sociais, as consequências são irreparáveis para todos em volta.
+                                                            
+                                                            Acompanhando a excelente tradução de Adriana Lisboa, essa bela edição de O morro dos ventos uivantes traz 90 notas, apresentação de Rodrigo Lacerda, cronologia de vida e obra de Emily Brontë e ainda dois textos de Charlotte Brontë para a reedição do livro que ela organizou após a morte da irmã. A versão impressa apresenta ainda capa dura e acabamento de luxo.</p>
+                                                        <a href="https://www.amazon.com.br/morro-dos-ventos-uivantes-comentada-ebook/dp/B01I9ZG1B4" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Segundo slide -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/Orgulho e Preconceito.jpg" class="card-img-top m-1" alt="Orgulho e Preconceito">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="card-body text-center m-2">
+                                                        <h5 class="card-title">Orgulho e Preconceito</h5>
+                                                        <p class="card-text mt-4">Com seu talento único para costurar uma narrativa cativante e repleta de diálogos brilhantes, Jane Austen retrata de modo magistral o universo que conhece como ninguém: a vida e a formação das mulheres no mundo patriarcal, rígido e cheio de formalidades da classe média inglesa provinciana.
+                            
+                                                            Segunda das cinco filhas dos Bennet, Elizabeth é sagaz e de espírito independente, mas, assim como as jovens da época, vê no casamento com um bom partido o caminho natural para uma vida aceitável. Ao conhecer o sr. Darcy, cobiçado solteiro que se muda para o seu condado, é repelida pela arrogância do cavalheiro, que por sua vez parece indiferente aos encantos da moça.
+                                                            Publicado em 1813, Orgulho e preconceito segue fascinando leitoras e leitores de todas as idades. Apaixonante e divertidíssima história de amor, com todas as amizades, fofocas e rivalidades esnobes da vida provinciana, o romance de Jane Austen é também uma jornada de autoconhecimento na qual Elizabeth e Darcy devem amadurecer para se tornarem pessoas melhores e conseguirem seu final feliz.</p>
+                                                        <a href="https://www.amazon.com.br/Orgulho-preconceito-comentada-Jane-Austen/dp/6584952061/ref=asc_df_6584952061/?tag=googleshopp00-20&linkCode=df0&hvadid=647622699489&hvpos=&hvnetw=g&hvrand=2270732862981851699&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9074248&hvtargid=pla-2201844514206&psc=1&mcid=cd949b9050b23d478fcc7b99498e99f0" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Terceiro slide -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/O Conde de Monte Cristo.jpg" class="card-img-top m-1" alt="O Conde de Monte Cristo">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="card-body text-center m-2">
+                                                        <h5 class="card-title">O Conde de Monte Cristo</h5>
+                                                        <p class="card-text mt-4">Traições, denúncias anônimas, tesouros fabulosos, envenenamentos, vinganças e muito suspense. A trama de O conde de Monte Cristo traz uma emoção diferente a cada página e talvez isso explique a razão de a obra do escritor francês Alexandre Dumas ter se transformado em um clássico da literatura mundial, mexendo com a imaginação dos leitores há mais de 150 anos.
+                            
+                                                            No romance, o marinheiro Edmond Dantés é preso injustamente, vítima de um complô. Anos depois, consegue escapar da prisão, enriquece e planeja uma vingança mirabolante. A galeria de personagens criada por Dumas faz um retrato fiel da França do século XIX, um mundo em transformação, em que passou a ser possível a mudança de posições sociais. As aventuras de Dantés ainda ganharam diversas versões cinematográficas que colaboraram para o sucesso da trama.
+                                                            
+                                                            Com texto integral e a mesma tradução premiada da edição comentada e ilustrada, vencedora do Jabuti, a versão bolso de luxo ainda tem capa dura e o clássico acabamento de luxo. Tudo com um preço mais que acessível.</p>
+                                                        <a href="https://www.amazon.com.br/conde-Monte-Cristo-edi%C3%A7%C3%A3o-Cl%C3%A1ssicos/dp/853780827X" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/Jane Eyre.jpg" class="card-img-top m-1" alt="Jane Eyre">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class=" card-body text-center m-2">
+                                                        <h5 class="card-title">Jane Eyre</h5>
+                                                        <p class="card-text mt-4">Jane Eyre conheceu o sofrimento ainda pequena, na casa da tia que a criou e na austera Lowood Institution onde foi educada. Mas também pequena já mostrava sua natureza firme e independente. Fiel a si mesma, ciente do seu valor e da consideração que merecia, assim manteve-se por toda a vida – ao abandonar os tormentos de Lowood e se empregar como governanta em Thornfield Hall; ao descobrir o amor mas, com ele, um terrível segredo; ao decidir partir e, depois, recomeçar.
+                            
+                                                            Publicado em 1847, Jane Eyre é o romance mais conhecido de Charlotte Brontë. Com toques góticos e boas doses de crítica social e moral, esse clássico da literatura pôs-se à frente de seu tempo ao apresentar uma personagem feminina forte e explorar questões de classe, sexualidade, religião e gênero. Acompanhamos o desenvolvimento emocional da protagonista e sua busca por espaço, respeito e autonomia financeira, num mundo que não esperava tais ambições vindas de uma mulher. 
+                            
+                                                            Com tradução da escritora Adriana Lisboa e apresentação da roteirista Antonia Pellegrino, essa edição traz ainda ilustrações de época, mais de 240 notas, cronologia. E, como anexos, textos para as primeiras edições do livro assinados por "Currer Bell", pseudônimo da autora. A versão impressa apresenta ainda capa dura e acabamento de luxo.</p>
+                                                        <a href="https://www.amazon.com.br/Jane-Eyre-comentada-ilustrada-Cl%C3%A1ssicos/dp/8537817619/ref=sr_1_1?crid=XL988MNODO3&keywords=jane+eyre+zahar&qid=1706493850&sprefix=jane+eyre+za%2Caps%2C247&sr=8-1" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                            <div class="carousel-controls">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-classicos" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                                 </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-classicos" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                                            </button>
+                                </div>
+        
+                        
+
+
+                        <!-- Indicadores do carrossel -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-classicos" class="active" data-bs-slide-to="0"></button>
+                            <button type="button" data-bs-target="#carousel-classicos" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carousel-classicos" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carousel-classicos" data-bs-slide-to="3"></button>
+                        </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="https://www.amazon.com.br/dp/B0CFZZWBMH?binding=hardcover&ref=dbs_dp_rwt_sb_pc_thcv" class="btn" target="_blank">Clique aqui para ver outros clássicos!</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="romance-epoca" class="pt-5 pb-5">
+        <div class="container">
+            <!-- Descrição e título da seção -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title text-center mb-4">Romances de época</h2>
+                    <p class="text-center">Desfrute de uma viagem no tempo e mergulhe em histórias envolventes com nossos romances de época. Explore dramas, paixões proibidas e intrigas em cenários históricos fascinantes, onde o amor transcende as barreiras do tempo e das convenções sociais.</p>
+                </div>
+            </div>
+            
+            <!-- Carrossel de cards -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carousel-romance-epoca" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Primeiro slide -->
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/Mulherzinhas.jpg" class="card-img-top m-1" alt="Mulherzinhas">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="card-body text-center m-2">
+                                                        <h5 class="card-title">Mulherzinhas</h5>
+                                                        <p class="card-text mt-4">Romance que inovou a literatura e ainda hoje comove e atrai leitores
+
+                                                            Dezembro de 1861, Massachusetts. Meg, Jo, Beth e Amy March enfrentam seu primeiro Natal sem o pai, que serve na Guerra Civil. É o marco inicial da jornada de formação das quatro irmãs, e Mulherzinhas as acompanha nesse processo até a vida adulta. Entre alegrias e aflições, desafios e conquistas, perdas e aprendizados, crescemos com elas...
+                                                            
+                                                            O romance tem sensibilidade, humor e pulso e mostra que um universo familiar e cotidiano pode ser o celeiro de mudanças importantes, ao defender – sem falsa moralidade – princípios como a virtude acima da riqueza, a equidade entre os gêneros e a realização individual sem prejuízo do bem coletivo.
+                                                            
+                                                            Essa edição traz o texto integral, centenas de notas, apresentação e cronologia de vida e obra de Alcott, além de cerca de 130 ilustrações consagradas de Frank T. Merrill.</p>
+                                                        <a href="https://www.amazon.com.br/Mulherzinhas-edi%C3%A7%C3%A3o-comentada-ilustrada-Cl%C3%A1ssicos/dp/853781847X/ref=sr_1_1?crid=20CQVGY1L2WLM&keywords=mulherzinhas+zahar&qid=1706492712&sprefix=Mulherzinhas+zah%2Caps%2C265&sr=8-1" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Segundo slide -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/A Viajante do Tempo.jpg" class="card-img-top m-1" alt="A Viajante do Tempo">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class=" card-body text-center m-2">
+                                                        <h5 class="card-title">A Viajante do Tempo</h5>
+                                                        <p class="card-text mt-4">PRÊMIO RITA DE MELHOR ROMANCE.</p>
+                                                        <p> 1945, no final da Segunda Guerra Mundial, a enfermeira Claire Randall volta para os braços do marido, com quem desfruta uma segunda lua de mel em Inverness, nas Ilhas Britânicas. Durante a viagem, ela é atraída para um antigo círculo de pedras, no qual testemunha rituais misteriosos. Dias depois, quando resolve retornar ao local, algo inexplicável acontece: de repente se vê no ano de 1743, numa Escócia violenta e dominada por clãs guerreiros.
+
+                                                            Tão logo percebe que foi arrastada para o passado por forças que não compreende, Claire precisa enfrentar intrigas e perigos que podem ameaçar a sua vida e partir o seu coração. Ao conhecer Jamie, um jovem guerreiro das Terras Altas, sente-se cada vez mais dividida entre a fidelidade ao marido e o desejo pelo escocês. Será ela capaz de resistir a uma paixão arrebatadora e regressar ao presente?</p>
+                                                        <a href="https://www.amazon.com.br/Outlander-viajante-tempo-Diana-Gabaldon/dp/8580418216?crid=3LQTK51844VY9&keywords=outlander+1&qid=1655160959&sprefix=outl,aps,274&sr=8-1&linkCode=sl1&tag=selecoes-20&linkId=37c13f41d044fa9ae00b74b75fabdbf6&language=pt_BR&ref_=as_li_ss_tl" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Terceiro slide -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/Segredos de uma noite de verão.jpg" class="card-img-top m-1" alt="Segredos de uma noite de verão">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class=" card-body text-center m-2">
+                                                        <h5 class="card-title">Segredos de uma noite de verão</h5>
+                                                        <p class="card-text mt-4">Primeiro livro da série As Quatro Estações do Amor, esta é uma emocionante história de uma jovem que sai em busca de um marido, mas encontra amizades verdadeiras e desejos intensos que ela jamais poderia imaginar. Apesar de sua beleza e de seus modos encantadores, Annabelle Peyton nunca foi tirada para dançar nos eventos da sociedade londrina. Como qualquer moça de sua idade, ela mantém as esperanças de encontrar alguém, mas, sem um dote para oferecer e vendo a família em situação difícil, amor é um luxo ao qual não pode se dar. Certa noite, em um dos bailes da temporada, conhece outras três moças também cansadas de ver o tempo passar sem ninguém para dividir sua vida. Juntas, as quatro dão início a um plano: usar todo o seu charme e sua astúcia feminina para encontrar um marido para cada, começando por Annabelle. No entanto, o admirador mais intrigante e persistente de Annabelle, o rico e poderoso Simon Hunt, não parece ter interesse em levá-la ao altar – apenas a prazeres irresistíveis em seu quarto. A jovem está decidida a rejeitar essa proposta, só que é cada vez mais difícil resistir à sedução do rapaz. As amigas se esforçam para encontrar um pretendente mais apropriado para ela. Mas a tarefa se complica depois que, numa noite de verão, Annabelle se entrega aos beijos tentadores de Simon... e descobre que o amor é um jogo perigoso. </p>
+                                                        <a href="https://www.amazon.com.br/Segredos-noite-ver%C3%A3o-Lisa-Kleypas/dp/858041427X" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card mr-5">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                        
+                                            <img src="./images/images-livros/Desejo á meia-noite.jpg" class="card-img-top m-1 " alt="Desejo á meia-noite">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class=" card-body text-center m-2">
+                                            <h5 class="card-title">Desejo á meia-noite</h5>
+                                            <p class="card-text mt-4">
+                                                Após sofrer uma decepção amorosa, Amelia Hathaway perdeu as esperanças de se casar. Desde a morte dos pais, ela se dedica exclusivamente a cuidar dos quatro irmãos – uma tarefa nada fácil, sobretudo porque Leo, o mais velho, anda desperdiçando dinheiro com mulheres, jogos e bebida.
+                                                
+                                                Certa noite, quando sai em busca de Leo pelos redutos boêmios de Londres, Amelia conhece Cam Rohan. Meio cigano, meio irlandês, Rohan é um homem difícil de se definir e, embora tenha ficado muito rico, nunca se acostumou com a vida na sociedade londrina.
+                                                
+                                                Apesar de não conseguirem esconder a imediata atração que sentem, Rohan e Amelia ficam aliviados com a perspectiva de nunca mais se encontrarem. Mas parece que o destino já traçou outros planos.
+                                                
+                                                Quando se muda com a família para a propriedade recém-herdada em Hampshire, Amelia acredita que esse pode ser o início de uma vida melhor para os Hathaways. Mas não faz ideia de quantas dificuldades estão a sua espera.
+                                                
+                                                E a maior delas é o reencontro com o sedutor Rohan, que parece determinado a ajudá-la a resolver seus problemas. Agora a independente Amelia se verá dividida entre o orgulho e seus sentimentos.
+                                                
+                                                Será que Rohan, um cigano que preza sua liberdade acima de tudo, estará disposto a abrir mão de suas raízes e se curvar à maior instituição de todos os tempos: o casamento?</p>
+                                            <a href="https://www.amazon.com.br/Desejo-meia-noite-Os-Hathaways-Livro-ebook/dp/B00CDQTJIS?ref_=ast_author_dp&dib=eyJ2IjoiMSJ9.HSWXf43mc0ukQ0XAfhDrYhQNvvLrva78lJcYU8J8JXNZf7QOgDN9qLLh1feNpExoowdqaUPufye0XS7L1uQejMnwgAXhkjPfh4bp376QZtRThQBHgIvqSklhMb6cIyU_VrIHuFlL8B48LSfDIejsAWYh7j89OdgqsZk03dm5g5CBO7j-6edVmOcsDeFpSA5Ugto6nXR0OS6m5yDxz656C4D12gcGD2fzYMJsO-LOLCQ.-yTffXzX6M39mCAyQ3fwgDSdXvqLFEOQiLM_XM1Iz-M&dib_tag=AUTHOR" class="btn">Compre</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="carousel-controls">
+                        <button class="carousel-control-prev" data-bs-target="#carousel-romance-epoca"  type="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" data-bs-target="#carousel-romance-epoca" type="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                       </div>
+
+                       <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-romance-epoca" class="active" data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#carousel-romance-epoca" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-romance-epoca" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carousel-romance-epoca" data-bs-slide-to="3"></button>
+                    </div>
+                
+                <div class="mt-3 text-center">
+                    <a href="https://www.amazon.com.br/s?k=romances+de+epoca&i=digital-text&crid=242O0AD206LFX&sprefix=romances+de+%2Cdigital-text%2C198&ref=nb_sb_ss_ts-doa-p_1_12" class="btn" target="_blank">Clique aqui para ver outros romances de época!</a>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="romance" class="pt-5 pb-5">
+        <div class="container">
+            <!-- Descrição e título da seção -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title text-center mb-4">Romances</h2>
+                    <p class="text-center">Desfrute de uma variedade de histórias envolventes e emocionantes em nossa coleção de romances. Desde dramas intensos até narrativas de amor cativantes, explore mundos de emoção, aventura e descoberta através das páginas desses livros.</p>
+                </div>
+            </div>
+            
+            <!-- Carrossel de cards -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carousel-romance" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Primeiro slide -->
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/Antes de Partir.jpg" class="card-img-top m-1" alt="Antes de Partir">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class=" card-body text-center m-2">
+                                                        <h5 class="card-title">Antes de Partir</h5>
+                                                        <p class="card-text mt-4">As pessoas que amamos ficam conosco para sempre... às vezes de maneiras surpreendentes. Um ano depois do avião em que o marido viajava desaparecer no oceano Pacífico, Abby Gamble ainda tenta superar a dor da perda. O relacionamento entre ela e Ben era incondicional, profundo, e se fortaleceu ainda mais ao terem de lidar com uma tragédia anos atrás. Abby sabia que Ben iria querer que ela seguisse em frente. Seu primeiro passo foi entrar de cabeça no trabalho, dedicando-se a sua empresa de cosméticos... até que ela conhece Joel, um médico cujo passado é tão repleto de cicatrizes quanto o dela. Joel nunca se perdoou por uma decisão que tomou ainda na infância, que resultou numa fatalidade. Esse evento o fez direcionar todas as suas escolhas de futuro para se redimir do passado. Quando conhece Abby, ele decide se dar uma nova chance, mas Abby ainda resiste à ideia de deixar a história com Ben para trás. No entanto, desde que o avião caiu, Ben busca uma maneira de voltar para Abby. De alguma forma, ele precisa reencontrar a esposa novamente.</p>
+                                                        <a href="https://www.amazon.com.br/Antes-partir-BRINDE-Charlie-Donlea/dp/6559572641/ref=sr_1_2?crid=2WX1C9NG0R1V9&keywords=charlie+donlea&qid=1706498685&s=books&sprefix=Charlie%2Cstripbooks%2C216&sr=1-2" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Segundo slide -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card m-3">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/Como eu era antes de você.jpg" class="card-img-top m-1" alt="Como eu era antes de você">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class=" card-body text-center m-2">
+                                                        <h5 class="card-title">Como eu era antes de você</h5>
+                                                        <p class="card-text mt-4">Aos 26 anos, Louisa Clark não tem muitas ambições. Ela mora com os pais, a irmã mãe solteira, o sobrinho pequeno e um avô que precisa de cuidados constantes desde que sofreu um derrame. Trabalha como garçonete num café, um emprego que não paga muito, mas ajuda nas despesas, e namora Patrick, um triatleta que não parece interessado nela. Não que ela se importe.</p>
+                                                        
+                                                        <p>Quando o café fecha as portas, Lou é obrigada a procurar outro emprego. Sem muitas qualificações, consegue trabalho como cuidadora de um tetraplégico. Will Traynor, de 35 anos, é inteligente, rico e mal-humorado. Preso a uma cadeira de rodas depois de um acidente de moto, o antes ativo e esportivo Will desconta toda a sua amargura em quem estiver por perto. Tudo parece pequeno e sem graça para ele, que sabe exatamente como dar um fim a esse sentimento. O que Will não sabe é que Lou está prestes a trazer cor a sua vida. E nenhum dos dois desconfia de que irá mudar para sempre a história um do outro.</p>
+                                                        
+                                                        <a href="https://www.amazon.com.br/Como-Eu-Era-Antes-Voc%C3%AA/dp/8580573297/ref=sr_1_1?crid=2PXCXJZ8ZGYDC&keywords=como+eu+era+antes+de+voc%C3%AA&qid=1706499153&s=books&sprefix=como+eu%2Cstripbooks%2C238&sr=1-1" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Terceiro slide -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/O ar que ele respira.jpg" class="card-img-top m-1" alt="O ar que ele respira">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class=" card-body text-center m-2">
+                                                        <h5 class="card-title">O ar que ele respira</h5>
+                                                        <p class="card-text mt-4">O novo romance da autora de Sr. Daniels. Como superar a dor de uma perda irreparável? Elizabeth está tentando seguir em frente. Depois da morte do marido e de ter passado um ano na casa da mãe, ela decide voltar a seu antigo lar e enfrentar as lembranças de seu casamento feliz com Steven. Porém, ao retornar à pequena Meadows Creek, ela se depara com um novo vizinho, Tristan Cole. Grosseiro, solitário, o olhar sempre agressivo e triste, ele parece fugir do passado. Mas Elizabeth logo descobre que, por trás daquele ser intratável, há um homem devastado pela morte das pessoas que mais amava. Elizabeth procura se aproximar dele, mas Tristan tenta de todas as formas impedir que ela entre em sua vida. Em seu coração despedaçado parece não haver espaço para um novo começo. Ou talvez sim.</p>
+                                                        <a href="https://www.amazon.com.br/ar-que-ele-respira-ebook/dp/B01IND9TES/ref=sr_1_1?crid=3V3ZVY3M2SUQS&keywords=o+ar+que+ele+respira&qid=1706499990&s=digital-text&sprefix=o+ar+%2Cdigital-text%2C212&sr=1-1" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Quarto slide -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                        <div class="card mr-5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <img src="./images/images-livros/P.S. Eu te amo.jpg" class="card-img-top m-1" alt="P.S. Eu te amo">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class=" card-body text-center m-2">
+                                                        <h5 class="card-title">P.S. Eu te amo</h5>
+                                                        <p class="card-text mt-4">“Um romance sensacional que prova que o amor verdadeiro nunca morre.” ― Cosmopolitan</p>
+
+                                                        <p>Gerry e Holly tiveram a sorte que a maioria das pessoas não têm: encontraram suas almas gêmeas. Feitos um para o outro, sabiam que se amariam até o fim de suas vidas.</p>
+                                                        
+                                                        <p>O que não esperavam é que esse fim chegaria tão cedo: a descoberta tardia de um tumor cerebral em Gerry lhe dá poucos meses de vida. Devastada, Holly nem mesmo consegue imaginar como conseguirá viver sem o marido.</p>
+                                                        
+                                                        <p>Até que ela descobre que, antes de morrer, Gerry a deixou uma série de cartas, uma para cada mês e todas assinadas com “P.S. Eu te amo”. Com desafios e instruções para ajudá-la a seguir em frente, essas cartas vão fazer com que Holly ria, chore, viva e encontre a enorme coragem de criar novas memórias junto das pessoas que ama.</p>
+                                                        <p>Sucesso absoluto, P.S. Eu te amo é um dos romances contemporâneos mais aclamados do mundo, tendo uma legião de fãs. Em uma nova edição com tradução inédita da autora Iris Figueiredo, essa é uma história sobre luto, esperança e um tipo de amor que nunca morre. </p>
+                                                        <a href="https://www.amazon.com.br/P-S-Eu-amo-Cecelia-Ahern/dp/6555115106/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1706499632&sr=1-1" class="btn">Compre</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Controles do carrossel -->
+                        <div class="carousel-controls">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-romance" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-romance" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Indicadores do carrossel -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-romance" class="active" data-bs-slide-to="0"></button>
+                            <button type="button" data-bs-target="#carousel-romance" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carousel-romance" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carousel-romance" data-bs-slide-to="3"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-3 text-center">
+                    <a href="https://www.amazon.com.br/s?k=romance&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2LK5RC8NJOLJQ&sprefix=romance%2Caps%2C413&ref=nb_sb_noss_1" class="btn" target="_blank">Clique aqui para ver outros romances!</a>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section id="fantasia" class="pt-5 pb-5">
+            <div class="container">
+                <!-- Descrição e título da seção -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="section-title text-center mb-4">Fantasia</h2>
+                        <p class="text-center">Explore um mundo de magia, aventura e criaturas fantásticas com nossos emocionantes romances de fantasia. De reinos mágicos a jornadas épicas, mergulhe em histórias que desafiam a imaginação e o levam a lugares além dos limites da realidade.</p>
+                    </div>
+                </div>
+                
+                <!-- Carrossel de cards -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="carousel-fantasia" class="carousel slide">
+                            <div class="carousel-inner">
+                                <!-- Primeiro slide -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                            <div class="card mr-5">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <!-- Substitua a URL da imagem e o conteúdo conforme necessário -->
+                                                        <img src="./images/images-livros/As quatro rainhas mortas.jpg" class="card-img-top m-1" alt="As quatro rainhas mortas">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class=" card-body text-center m-2">
+                                                            <!-- Substitua o título, texto e URL do botão conforme necessário -->
+                                                            <h5 class="card-title">As quatro rainhas mortas</h5>
+                                                            <p class="card-text mt-4">"
+                                                                Quatro rainhas mortas. Três dias para encontrar o assassino. Dois romances proibidos. Um final imprevisível.
+                                                                
+                                                                Roubos, mentiras, traições, um luxuoso cenário de realeza e uma região dominada pela sujeira e contrabando: neste contexto situa-se Quadara, nação dividida por quatro quadrantes e governada por quatro rainhas diferentes por suas peculiaridades, mas unidas por um objetivo em comum: proteger seu povo.
+                                                                
+                                                                Quando Keralie Corrington, a melhor e mais hábil larápia de Toria, rouba Varin, um mensageiro eonista, um labirinto começa a se formar, conduzindo-os à cena do crime que costura toda a narrativa da história: o palácio real. Num movimento contínuo de fuga e proximidade, os dois enredam-se numa teia de conspiração ao tentarem, incansavalmente, impedir os assassinatos antes que seja tarde demais.
+                                                                
+                                                                No entanto, algumas questões permanecem: será que Keralie conseguirá não se deixar dominar pelos antigos hábitos em prol de um interesse maior que os seus próprios?
+                                                                
+                                                                E a união de Quadara, por tanto tempo preservada, conseguirá permanecer inviolada?
+                                                                
+                                                                 
+                                                                
+                                                                As quatro rainhas mortas, melhor livro da Amazon - Março de 2019
+                                                                
+                                                                 
+                                                                
+                                                                ""Uma mistura perfeita e letal de fantasia e suspense."" - Entertainment Weekly
+                                                                
+                                                                ""Leitura viciante."" - Refinery29
+                                                                
+                                                                ""Scholte criou um mundo repleto de magia e intriga e personagens memoráveis."" - Publishers Weekly
+                                                                
+                                                                ""A autora manipula diversos universos e pontos de vista para criar uma obra-prima de suspense e romance"" - Booklist
+                                                                
+                                                                ""Uma história cheia de guinadas inesperadas, personagens complexos que se transformam através da narrativa e um final completamente surpreendente. Leitura obrigatória para fãs de fantasia e literatura jovem."" - School Library Journal
+                                                                
+                                                                "</p>
+                                                            <a href="https://www.amazon.com.br/quatro-rainhas-mortas-Astrid-Scholte/dp/8501118273/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1706500545&sr=1-1" class="btn">Compre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Segundo slide -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                            <div class="card mr-5">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <!-- Substitua a URL da imagem e o conteúdo conforme necessário -->
+                                                        <img src="./images/images-livros/Enraizados.jpg" class="card-img-top m-1" alt="Enraizados">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class=" card-body text-center m-2">
+                                                            <!-- Substitua o título, texto e URL do botão conforme necessário -->
+                                                            <h5 class="card-title">Enraizados</h5>
+                                                            <p class="card-text mt-4">"Nosso Dragão não come as meninas que captura, não importam as histórias que contem fora do vale. Nós às vezes as ouvimos por conta dos viajantes que passam por aqui. Eles falam como se estivéssemos sacrificando um ser humano e ele fosse um dragão de verdade. Claro que não é assim: ele pode ser um mago imortal, mas continua sendo um homem, e nossos pais se uniriam e o matariam se a cada dez anos ele quisesse usar uma de nós como comida. Ele nos protege contra a Floresta, e somos gratos; mas não tanto assim."
+
+                                                                Contos de fadas revisitados
+                                                                
+                                                                Naomi Novik introduz um mundo novo e ousado, com raízes fincadas no folclore eslavo, tão cativante e encantador quanto uma fábula dos irmãos Grimm.
+                                                                
+                                                                Agnieszka ama seu lar no vale, sua vila tranquila, as florestas e o rio cintilante. Mas a Floresta corrompida fica à espreita na fronteira, cheia de um poder maligno desconhecido. Seu povo depende de um mago frio e ambicioso conhecido apenas como Dragão para apaziguar a ira da Floresta e impedi-la de avançar sobre o vilarejo. Mas ele exige um preço em troca da proteção: a cada dez anos, uma jovem é entregue para servi-lo; um destino quase tão indesejado quanto cair nas garras da Floresta.
+                                                                
+                                                                A próxima escolha está se aproximando rapidamente, e Agnieszka está com medo. Ela sabe — todo mundo sabe — que o Dragão vai levar Kasia: a bela, graciosa e corajosa Kasia, sua melhor amiga no mundo. E não há como salvá-la. Mas Agnieszka teme as coisas erradas. Porque, quando o Dragão chegar, não é Kasia que ele vai escolher.
+                                                                
+                                                                Vencedor do Nebula Award de 2016.</p>
+                                                            <a href="https://www.amazon.com.br/Enraizados-Naomi-Novik-ebook/dp/B072W8H5MJ/ref=sr_1_3?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1DGGCYL1FNAC6&keywords=Enraizados&qid=1706500933&s=books&sprefix=enraizados%2Cstripbooks%2C208&sr=1-3" class="btn">Compre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Terceiro slide -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                            <div class="card mr-5">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <!-- Substitua a URL da imagem e o conteúdo conforme necessário -->
+                                                        <img src="./images/images-livros/A noiva do deus do mar.jpg" class="card-img-top m-1" alt="A noiva do deus do mar">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class=" card-body text-center m-2">
+                                                            <!-- Substitua o título, texto e URL do botão conforme necessário -->
+                                                            <h5 class="card-title">A noiva do deus do mar</h5>
+                                                            <p class="card-text mt-4">“Uma bela e fascinante releitura que eu gostaria de ter lido quando era mais nova… Uma história sincera e profunda que recomendarei por muitos anos.”
+                                                                ― Elizabeth Lim, autora de Os seis grous, best-seller do New York Times
+                                                                
+                                                                
+                                                                “Inteligente, criativo e escrito com primor.”
+                                                                ― Stephanie Garber, autora de Caraval, best-seller do Sunday Times
+                                                                
+                                                                
+                                                                “Uma jornada de coração e espírito. Vai fascinar, encantar e surpreender os leitores.”
+                                                                ― Juliet Marillier, premiada autora da série Sevenwaters
+                                                                
+                                                                
+                                                                Deixe o Fio Vermelho do Destino te guiar
+                                                                
+                                                                
+                                                                Tempestades terríveis assolam a terra natal de Mina há gerações. Seu povo acredita que o Deus do Mar, seu antigo protetor, agora os amaldiçoa. E, na esperança de apaziguar sua ira, todos os anos uma bela donzela é lançada ao mar em sacrifício.
+                                                                
+                                                                
+                                                                Muitos acreditam que Shim Cheong, a mais bela menina da aldeia – e a amada de Joon, irmão de Mina –, pode ser aquela que finalmente dará fim ao sofrimento de todos. Mas, na noite em que Shim Cheong será sacrificada, Joon a segue até o barco que a levará ao mar, mesmo sabendo que isso pode significar sua morte. Preocupada com o irmão e disposta a fazer qualquer coisa para salvá-lo, Mina pula na água no lugar de Shim Cheong.
+                                                                
+                                                                
+                                                                Ao cair no mar, Mina é levada por um dragão ao Reino dos Espíritos, mas, quando encontra o Deus do Mar, a garota descobre que ele está preso em um sono encantado e não são apenas os humanos que correm perigo, mas todo o Reino dos Espíritos também. Com a ajuda de Shin, o misterioso protetor do Deus do Mar, e de um grupo singular de aliados composto de demônios e espíritos, Mina decide partir em uma missão para acordar o Deus do Mar e dar fim à maldição.
+                                                                
+                                                                
+                                                                Porém, um humano não pode viver muito tempo no Reino dos Espíritos, e o perigo espreita por todos os lados, pois há aqueles que fariam qualquer coisa para impedir que o Deus do Mar acorde.</p>
+                                                            <a href="https://www.amazon.com.br/noiva-Deus-Mar-Axie-Oh/dp/655539403X/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2VICNRSS1IB8X&keywords=a+noiva+do+deus+do+mar&qid=1706501277&s=books&sprefix=a+noiva+do+deus+do+mar%2Cstripbooks%2C198&sr=1-1" class="btn">Compre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Quarto slide -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                            <div class="card mr-5">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <!-- Substitua a URL da imagem e o conteúdo conforme necessário -->
+                                                        <img src="./images/images-livros/Gild.jpg" class="card-img-top m-1" alt="Gild">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class=" card-body text-center m-2">
+                                                            <!-- Substitua o título, texto e URL do botão conforme necessário -->
+                                                            <h5 class="card-title">Gild</h5>
+                                                            <p class="card-text mt-4">GILD, a fantasia sensação do TikTok, finalmente chega ao Brasil.
+
+                                                                Perfeito para fãs de Sarah J. Maas e Jennifer L. Armentrout.
+                                                                
+                                                                Ouro.
+                                                                
+                                                                Pisos de ouro. Paredes de ouro. Móveis de ouro. Roupas de ouro. No castelo do Rei Midas, construído no alto das montanhas geladas, tudo é feito de ouro.
+                                                                
+                                                                Até mesmo eu.
+                                                                
+                                                                O Rei Midas me salvou. Ele me tirou da miséria e me colocou em um pedestal. Sou chamada de sua preciosa. Sua favorita. Sou a mulher que ele tocou de ouro para mostrar a todos que a ele pertenço. Para mostrar quão poderoso ele é. Midas me deu segurança, e eu dei a ele meu coração. E, mesmo que eu não possa deixar os limites do castelo, sei que estou segura. Até que a guerra começa no reino e um acordo é selado...
+                                                                
+                                                                De repente, minha confiança está quebrada. Meu amor é desafiado. E eu percebo que tudo o que eu pensei que sabia sobre Midas pode não ser verdade. Porque, por trás dessas grades em que estou presa, não importa quão douradas elas sejam, não passam de uma gaiola. Porém, os monstros do lado de fora podem me fazer desejar nunca ter saído dela.</p>
+                                                            <a href="https://www.amazon.com.br/Gild-Fantasia-sensa%C3%A7%C3%A3o-Prisioneira-dourada/dp/6555662921/ref=sr_1_10?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=SEHK33AUE3CY&keywords=fantasia&qid=1706501539&s=books&sprefix=fantasia%2Cstripbooks%2C208&sr=1-10" class="btn">Compre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Controles do carrossel -->
+                            <div class="carousel-controls">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-fantasia" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-fantasia" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Indicadores do carrossel -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel-fantasia" class="active" data-bs-slide-to="0"></button>
+                                <button type="button" data-bs-target="#carousel-fantasia" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#carousel-fantasia" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#carousel-fantasia" data-bs-slide-to="3"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="https://www.amazon.com.br/s?k=fantasia&i=stripbooks&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" class="btn" target="_blank">Clique aqui para ver outros livros de Fantasia!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        
+        
+        <section id="suspense" class="pt-5 pb-5">
+            <div class="container">
+                <!-- Descrição e título da seção -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="section-title text-center mb-4">Suspense</h2>
+                        <p class="text-center">Explore o mundo sombrio e cheio de mistérios com nossos emocionantes livros de suspense. De assassinatos intrigantes a segredos ocultos, mergulhe em histórias que manterão você na ponta do seu assento, ansioso para descobrir a verdade.</p>
+                    </div>
+                </div>
+                
+                <!-- Carrossel de cards -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="carousel-suspense" class="carousel slide">
+                            <div class="carousel-inner">
+                                <!-- Primeiro slide -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                            <div class="card mr-5">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <!-- Substitua a URL da imagem e o conteúdo conforme necessário -->
+                                                        <img src="./images/images-livros/O Assassinato de Roger Ackroyd.jpg" class="card-img-top m-1" alt="O Assassinato de Roger Ackroyd">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class=" card-body text-center m-2">
+                                                            <!-- Substitua o título, texto e URL do botão conforme necessário -->
+                                                            <h5 class="card-title">O Assassinato de Roger Ackroyd</h5>
+                                                            <p class="card-text mt-4">Em uma noite de setembro, o milionário Roger Ackroyd é encontrado morto, esfaqueado com uma adaga tunisiana – objeto raro de sua coleção particular – no quarto da mansão Fernly Park na pacata vila de King’s Abbott. A morte do fidalgo industrial é a terceira de uma misteriosa sequência de crimes, iniciada com a de Ashley Ferrars, que pode ter sido causada ou por uma ingestão acidental de soníferos ou envenenamento articulado por sua esposa – esta, aliás, completa a sequência de mortes, num provável suicídio.
+
+                                                                Os três crimes em série chamam a atenção da velha Caroline Sheppard, irmã do dr. Sheppard, médico da cidade e narrador da história. Suspeitando de que haja uma relação entre as mortes, dada a proximidade de miss Ferrars com o também viúvo Roger Ackroyd, Caroline pede a ajuda do então aposentado detetive belga Hercule Poirot, que passava suas merecidas férias na vila.
+                                                                
+                                                                Ameaças, chantagens, vícios, heranças, obsessões amorosas e uma carta reveladora deixada por miss Ferrars compõem o cenário desta surpreendente trama, cujo transcorrer elenca novos suspeitos a todo instante, exigindo a habitual perspicácia do detetive Poirot em seu retorno ao mundo das investigações. O assassinato de Roger Ackroyd é um dos mais famosos romances policiais da rainha do crime.</p>
+                                                            <a href="https://www.amazon.com.br/assassinato-Roger-Ackroyd-Agatha-Christie/dp/8525057002/ref=sr_1_1?crid=1K7V01ODF1M9&keywords=o+assassinato+de+roger+ackroyd&qid=1706502459&s=books&sprefix=o+assa%2Cstripbooks%2C252&sr=1-1" class="btn">Compre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Segundo slide -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                            <div class="card mr-5">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <!-- Substitua a URL da imagem e o conteúdo conforme necessário -->
+                                                        <img src="./images/images-livros/E Não sobrou nenhum.jpg" class="card-img-top m-1" alt="E não sobrou nenhum">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class=" card-body text-center m-2">
+                                                            <!-- Substitua o título, texto e URL do botão conforme necessário -->
+                                                            <h5 class="card-title">E não sobrou nenhum</h5>
+                                                            <p class="card-text mt-4">Uma ilha misteriosa, um poema infantil, dez soldadinhos de porcelana e muito suspense são os ingredientes com que Agatha Christie constrói seu romance mais importante. Na ilha do Soldado, antiga propriedade de um milionário norte-americano, dez pessoas sem nenhuma ligação aparente são confrontadas por uma voz misteriosa com fatos marcantes de seus passados.
+
+                                                                Convidados pelo misterioso mr. Owen, nenhum dos presentes tem muita certeza de por que estão ali, a despeito de conjecturas pouco convincentes que os leva a crer que passariam um agradável período de descanso em mordomia. Entretanto, já na primeira noite, o mistério e o suspense se abatem sobre eles e, num instante, todos são suspeitos, todos são vítimas e todos são culpados.
+                                                                
+                                                                É neste clima de tensão e desconforto que as mortes inexplicáveis começam e, sem comunicação com o continente devido a uma forte tempestade, a estadia transforma-se em um pesadelo. Todos se perguntam: quem é o misterioso anfitrião, mr. Owen? Existe mais alguém na ilha? O assassino pode ser um dos convidados? Que mente ardilosa teria preparado um crime tão complexo? E, sobretudo, por quê?
+                                                                
+                                                                São essas e outras perguntas que o leitor será desafiado a resolver neste fabuloso romance de Agatha Christie, que envolve os espíritos mais perspicazes num complexo emaranhado de situações, lembranças e acusações na busca deste sagaz assassino. Medo, confinamento e angústia: que o leitor descubra por si mesmo porque E não sobrou nenhum foi eleito o melhor romance policial de todos os tempos.</p>
+                                                            <a href="https://www.amazon.com.br/n%C3%A3o-sobrou-nenhum-Agatha-Christie/dp/8525057010/ref=sr_1_1?crid=165OEKZLB6C6P&keywords=e+n%C3%A3o+sobrou+nenhum+agatha+christie&qid=1706502634&s=books&sprefix=e+n%C3%A3o%2Cstripbooks%2C218&sr=1-1" class="btn">Compre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Terceiro slide -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                            <div class="card mr-5">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <!-- Substitua a URL da imagem e o conteúdo conforme necessário -->
+                                                        <img src="./images/images-livros/Verity.jpg" class="card-img-top m-1" alt="Verity">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class=" card-body text-center m-2">
+                                                            <!-- Substitua o título, texto e URL do botão conforme necessário -->
+                                                            <h5 class="card-title">Verity</h5>
+                                                            <p class="card-text mt-4">Verity Crawford é a autora best-seller por trás de uma série de sucesso. Ela está no auge de sua carreira, aclamada pela crítica e pelo público, no entanto, um súbito e terrível acidente acaba interrompendo suas atividades, deixando-a sem condições de concluir a história... E é nessa complexa circunstância que surge Lowen Ashleigh, uma escritora à beira da falência convidada a escrever, sob um pseudônimo, os três livros restantes da já consolidada série.
+
+                                                                Para que consiga entender melhor o processo criativo de Verity com relação aos livros publicados e, ainda, tentar descobrir seus possíveis planos para os próximos, Lowen decide passar alguns dias na casa dos Crawford, imersa no caótico escritório de Verity - e, lá, encontra uma espécie de autobiografia onde a escritora narra os fatos acontecidos desde o dia em que conhece Jeremy, seu marido, até os instantes imediatamente anteriores a seu acidente - incluindo sua perspectiva sobre as tragédias ocorridas às filhas do casal.
+                                                                
+                                                                Quanto mais o tempo passa, mais Lowen se percebe envolvida em uma confusa rede de mentiras e segredos, e, lentamente, adquire sua própria posição no jogo psicológico que rodeia aquela casa. Emocional e fisicamente atraída por Jeremy, ela precisa decidir: expor uma versão que nem ele conhece sobre a própria esposa ou manter o sigilo dos escritos de Verity? </p>
+                                                            <a href="https://www.amazon.com.br/noiva-Deus-Mar-Axie-Oh/dp/655539403X/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2VICNRSS1IB8X&keywords=a+noiva+do+deus+do+mar&qid=1706501277&s=books&sprefix=a+noiva+do+deus+do+mar%2Cstripbooks%2C198&sr=1-1" class="btn">Compre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Quarto slide -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                            <div class="card mr-5">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <!-- Substitua a URL da imagem e o conteúdo conforme necessário -->
+                                                        <img src="./images/images-livros/Deixada para Trás.jpg" class="card-img-top m-1" alt="Deixada para Trás">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class=" card-body text-center m-2">
+                                                            <!-- Substitua o título, texto e URL do botão conforme necessário -->
+                                                            <h5 class="card-title">Deixada para Trás</h5>
+                                                            <p class="card-text mt-4">Duas colegas são raptadas. Megan foge e, um ano depois, escreve um livro que se torna um sucesso. Um detalhe inconveniente: Nicole continua desaparecida. Nicole e Megan são alunas do último ano da high school de Emerson Bay, uma cidadezinha na Carolina do Norte. Certa noite de verão, elas desaparecem de uma festa à beira do lago. A polícia realiza uma busca intensa, mas não encontra nenhuma pista. Quando já haviam perdido as esperanças de encontrá-las com vida, Megan aparece, milagrosamente, ao conseguir escapar do cativeiro escondido nas profundezas da mata. Um ano depois, Megan lança um livro contando o seu martírio naquelas duas semanas, e, imediatamente, ele se torna um best-seller e a converte de uma heroína local em celebridade nacional. Trata-se de um relato triunfante e inspirador, exceto por um detalhe inconveniente: Nicole continua desaparecida. Livia, irmã mais velha de Nicole, aluna de patologia forense, espera que um dia, em breve, o corpo de Nicole seja encontrado, e caberá a alguém como ela analisar a evidência e determinar finalmente a causa da morte de sua irmã. Em vez disso, a primeira pista do desaparecimento de Nicole surge de outro corpo que chega ao necrotério onde ela trabalha. É de alguém ligado ao passado de Nicole. Então, Livia entra em contato com Megan para contar a descoberta, e pedir mais detalhes da noite em que as duas foram sequestradas. Como outras garotas também desapareceram, Livia começa a acreditar que existe uma forte ligação entre todos aqueles casos. No entanto, Megan sabe mais do que revelou em seu livro. Lampejos de memória surgem, apontando para algo mais sombrio e monstruoso do que o descrito em suas arrepiantes memórias. Quanto mais ela e Livia se aprofundam, mais se dão conta de que, às vezes, o terror verdadeiro está em encontrar exatamente o que estávamos procurando.</p>
+                                                            <a href="https://www.amazon.com.br/Deixada-Para-Tr%C3%A1s-Charlie-Donlea/dp/8595810087/ref=sr_1_1?crid=DF0HK3B1M1CJ&keywords=deixada+para+tr%C3%A1s&qid=1706503014&s=books&sprefix=deixada%2Cstripbooks%2C240&sr=1-1" class="btn">Compre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Controles do carrossel -->
+                            <div class="carousel-controls">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-suspense" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-suspense" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Indicadores do carrossel -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel-suspense" class="active" data-bs-slide-to="0"></button>
+                                <button type="button" data-bs-target="#carousel-suspense" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#carousel-suspense" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#carousel-suspense" data-bs-slide-to="3"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="https://www.amazon.com.br/s?k=suspense&i=stripbooks&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" class="btn" target="_blank">Clique aqui para ver outros livros de Suspense!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        <section>
+            <div class="text-center mt-5 amazon">
+                <p>Se você gostou da nossa seleção de livros, confira mais nesse link:</p>
+                <a href="https://www.amazon.com.br/s?k=livros&i=stripbooks&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss">
+                    <i class="fab fa-amazon" style="font-size: 50px;"></i>
+                </a>
+            </div>
+        </section>
+        
+    </div>
+    
+    
+    <footer class="footer  p-4">
+        <div class="text-center">
+            <span class="text-muted">© 2024 Cultura Viva. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

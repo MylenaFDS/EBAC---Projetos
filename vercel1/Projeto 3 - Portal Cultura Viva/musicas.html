@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música - Cultura Viva</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+        }
+    
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            font-size: 2rem;
+            
+        }
+        .carousel-container {
+    position: relative; /* Certifique-se de que o contêiner do carrossel tenha posição relativa */
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -30px; /* Ajuste a distância do topo conforme necessário para posicionar mais abaixo */
+    left: 25%; /* Centraliza os indicadores horizontalmente */
+    transform: translateX(-25%); /* Centraliza os indicadores em relação ao pai */
+    margin-bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+    background-color: #c21496;
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+    <div class="container">
+        <h1 class="navbar-brand m-0 section-title">Cultura Viva</h1>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+            <ul class="nav nav-pills d-block d-md-flex">
+                <li class="nav-item fw-bold">
+                    <a href="index.html" class="nav-link">
+                        <i class="bi bi-house-door me-1"></i>
+                        Início
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="musicas.html" class="nav-link">
+                        <i class="bi bi-music-note me-1"></i>
+                        Música
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="livros.html" class="nav-link">
+                        <i class="bi bi-book me-1"></i>
+                        Livros
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="filmes.html" class="nav-link">
+                        <i class="bi bi-film me-1"></i>
+                        Filmes
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="index.html#fale-conosco" class="nav-link">
+                        <i class="bi bi-chat-left-text me-1"></i>
+                        Fale conosco
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
+    <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="images/CulturaViva.png" alt="Foto do espaço cultural">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Musics.png" alt="Música">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Books.png" alt="Livros">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Movies.jpg" alt="Livros">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+        </div>
+    </div>
+    <section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="images/Musics.jpg" class="d-block w-100 rounded" alt="Foto de um espaço cultural">
+            </div>
+            <div class="col-md-7 mt-5 mt-md-0">
+                <h2 class="section-title text-center mb-4">Música</h2>
+                <p class="text-center">
+                    Bem-vindo à seção de música do Cultura Viva. Aqui você encontrará uma variedade de gêneros musicais para explorar e desfrutar.
+                </p>
+                <p class="text-center">
+                    Nossa coleção inclui clássicos atemporais, as últimas tendências musicais e muito mais. Aprecie a música e deixe-se levar pela sua jornada cultural!
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="anos70">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Anos 70</h2>
+            <p class="section-description text-center mb-4">A seção "Anos 70" apresenta uma coleção de músicas icônicas desse período, trazendo à tona uma atmosfera nostálgica e envolvente. Cada música é uma peça fundamental da história da música, refletindo os sentimentos, valores e vibrações característicos dos anos 70. De Elvis Presley aos Eagles, cada faixa oferece uma experiência única e inesquecível, transportando os ouvintes de volta a uma era marcante da cultura musical.</p>
+        
+            <div id="carouselMusicas" class="carousel slide">
+                <div class="carousel-inner">
+    
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Elvis - In the Guetto.jpg" class="card-img-top m-2" alt="In the Ghetto">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">In the Ghetto</h5>
+                                        <p class="card-text text-center">Uma das músicas mais icônicas de Elvis Presley, retratando a vida difícil em um bairro pobre.</p>
+                                        <audio id="audio1" src="./musicas/Elvis - In the Ghetto.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio1', this, event)">Ouça</button>
+                                            <a href="./musicas/Elvis - In the Ghetto.mpeg" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Queen - Bohemian Rhapsody.jpg" class="card-img-top m-2" alt="Bohemian Rhapsody">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">Bohemian Rhapsody</h5>
+                                        <p class="card-text text-center">Uma das obras-primas do Queen, caracterizada por suas mudanças de ritmo e estilo.</p>
+                                        <audio id="audio2" src="./musicas/Queen - Bohemian Rhapsody.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio2', this, event)">Ouça</button>
+                                            <a href="./musicas/Queen - Bohemian Rhapsody.mpeg" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Bette Midler - The Rose.jpg" class="card-img-top m-2" alt="The Rose">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">The Rose</h5>
+                                        <p class="card-text text-center">Uma das baladas mais emocionantes de Bette Midler, retratando o amor e a perda.</p>
+                                        <audio id="audio3" src="./musicas/Bette Middler - The Rose.mp4"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio3', this, event)">Ouça</button>
+                                            <a href="./musicas/Bette Middler - The Rose.mp4" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Bee Gees - I Started a Joke.jpg" class="card-img-top m-2" alt="I Started a Joke">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">I Started a Joke</h5>
+                                        <p class="card-text text-center">Uma das músicas emblemáticas dos Bee Gees, conhecida por suas harmonias vocais distintas.</p>
+                                        <audio id="audio4" src="./musicas/Bee Gees - I Started a Joke.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio4', this, event)">Ouça</button>
+                                            <a href="./musicas/Bee Gees - I Started a Joke.mpeg" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/John Lennon - Imagine.webp" class="card-img-top m-2" alt="Imagine">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">Imagine</h5>
+                                        <p class="card-text text-center">Uma das canções mais conhecidas de John Lennon, transmitindo uma mensagem de paz e esperança.</p>
+                                        <audio id="audio5" src="./musicas/John Lennon - Imagine.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio5', this, event)">Ouça</button>
+                                            <a href="./musicas/John Lennon - Imagine.mpeg" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Eagles - Hotel California.jpg" class="card-img-top m-2" alt="Hotel California">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">Hotel California</h5>
+                                        <p class="card-text text-center">Um dos maiores sucessos dos Eagles, retratando a atmosfera única da Califórnia.</p>
+                                        <audio id="audio6" src="./musicas/Eagles - Hotel California.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio6', this, event)">Ouça</button>
+                                            <a href="./musicas/Eagles - Hotel California.mpeg" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Adicione mais itens conforme necessário -->
+    
+                </div>
+                <div class="carousel-controls">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMusicas" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMusicas" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMusicas" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carouselMusicas" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselMusicas" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselMusicas" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carouselMusicas" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#carouselMusicas" data-bs-slide-to="5"></button>
+                    <!-- Adicione mais indicadores conforme necessário -->
+                </div>
+            </div>
+        
+    </section>
+    
+    
+    <section id="anos80">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Anos 80</h2>
+            <p class="section-description text-center mb-4">A seção "Anos 80" apresenta uma seleção de músicas que marcaram época nessa década vibrante e diversificada. Das baladas românticas às batidas eletrizantes, cada música reflete os diversos estilos e influências que dominaram a cena musical dos anos 80. Com artistas como Cyndi Lauper, Alphaville e Whitney Houston, esta coleção oferece uma viagem nostálgica e emocionante pelas melodias que definiram uma era.</p>
+            <div id="carouselMusicasAnos80" class="carousel slide">
+                <div class="carousel-inner">
+    
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos80/CyndiLauper.jpg" class="card-img-top m-2" alt="Girls Just Wanna Have Fun">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">Girls Just Wanna Have Fun</h5>
+                                        <p class="card-text text-center">Um hino divertido e animado que celebra a liberdade e a alegria das mulheres em se divertir e aproveitar a vida ao máximo.</p>
+                                        <audio id="audio7" src="./musicas/Anos 80/Girls_Just_Wanna_Have_Fun.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio7', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 80/Girls_Just_Wanna_Have_Fun.mpeg" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos80/ForeverYoung.jpg" class="card-img-top m-2" alt="Forever Young">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">Forever Young</h5>
+                                        <p class="card-text text-center">Uma balada atemporal que expressa o desejo de permanecer jovem de coração e mente, independentemente da idade.</p>
+                                        <audio id="audio8" src="./musicas/Anos 80/Alphaville_-_Forever_Young_(BornMP3.com).mp3"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio8', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 80/Alphaville_-_Forever_Young_(BornMP3.com).mp3" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos80/Capa_de_I_Wanna_Dance_With_Somebody.jpg" class="card-img-top m-2" alt="I Wanna Dance With Somebody">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">I Wanna Dance With Somebody</h5>
+                                        <p class="card-text text-center">Uma música contagiante que convida a dançar e celebrar a alegria da vida e do amor.</p>
+                                        <audio id="audio9" src="./musicas/Anos 80/Whitney_Houston_-_I_Wanna_Dance_With_Somebody.mp3"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio9', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 80/Whitney_Houston_-_I_Wanna_Dance_With_Somebody.mp3" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos80/Thriller_25.jpg" class="card-img-top m-2" alt="Thriller">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">Thriller</h5>
+                                        <p class="card-text text-center">Um dos maiores sucessos de Michael Jackson, "Thriller" é uma música envolvente com uma batida cativante e um videoclipe icônico.</p>
+                                        <audio id="audio10" src="./musicas/Anos 80/Thriller - Michael Jackson.mp4"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio10', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 80/Thriller - Michael Jackson.mp4" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos80/BillyIdol.jpg" class="card-img-top m-2" alt="Dancing with myself">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">Dancing with myself</h5>
+                                        <p class="card-text text-center">Uma canção energética que fala sobre autoexpressão e alegria de dançar livremente consigo mesmo.</p>
+                                        <audio id="audio11" src="./musicas/Anos 80/Dancing with Myself.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio11', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 80/Dancing with Myself.mpeg" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos80/Bon_jovi_slippery_when_wet.jpg" class="card-img-top m-2" alt="Livin' On A Prayer">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4 text-center">Livin' On A Prayer</h5>
+                                        <p class="card-text text-center">Um clássico do rock que conta a história de um casal lutando contra as adversidades da vida com otimismo e esperança.</p>
+                                        <audio id="audio12" src="./musicas/Anos 80/Livin' On A Prayer.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio12', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 80/Livin' On A Prayer.mpeg" class="btn mx-2">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Adicione mais itens conforme necessário -->
+    
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMusicasAnos80" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselMusicasAnos80" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+    
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMusicasAnos80" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos80" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos80" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos80" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos80" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos80" data-bs-slide-to="5"></button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="anos90">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Anos 90</h2>
+            <p class="section-description text-center mb-4">A seção "Anos 90" apresenta uma seleção de músicas que definiram uma década marcante na história da música. De baladas emocionantes a ritmos dançantes, cada música reflete a diversidade e energia dos anos 90. Com artistas como Eric Clapton, Celine Dion, Oasis e muitos outros, esta coleção oferece uma jornada nostálgica e animada pelas melodias que ecoaram nos corações e nas pistas de dança durante essa época icônica.</p>
+            <div id="carouselMusicasAnos90" class="carousel slide" >
+                <div class="carousel-inner">
+    
+                    <div class="carousel-item active" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos90/Eric_Clapton_-_Tears_in_Heaven_(1992).jpeg" class="card-img-top m-2" alt="Tears in Heaven">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Tears in Heaven</h5>
+                                        <p class="card-text">Uma das baladas mais tocantes de Eric Clapton, dedicada ao seu filho Conor.</p>
+                                        <audio id="audio13" src="./musicas/Anos 90/Eric Clapton - Tears in Heaven.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio13', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 90/Eric Clapton - Tears in Heaven.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos90/Sarah Brightman & Andrea Bocelli.jpg" class="card-img-top m-2" alt="Time to Say Goodbye">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Time to Say Goodbye</h5>
+                                        <p class="card-text">Um dueto incrível entre Andrea Bocelli e Sarah Brightman, combinando vozes poderosas.</p>
+                                        <audio id="audio14" src="./musicas/Anos 90/Andrea Bocelli feat. Sarah Brightman.mp4"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio14', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 90/Andrea Bocelli feat. Sarah Brightman.mp4" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos90/Celine.jpg" class="card-img-top m-2" alt="Because You Loved Me">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Because You Loved Me</h5>
+                                        <p class="card-text">Um dos grandes sucessos de Celine Dion, expressando gratidão pelo amor e apoio de alguém.</p>
+                                        <audio id="audio15" src="./musicas/Anos 90/Celine Dion - Because You Loved Me.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio15', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 90/Celine Dion - Because You Loved Me.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos90/Shakira.jpg" class="card-img-top m-2" alt="Estoy Aquí">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Estoy Aquí</h5>
+                                        <p class="card-text">Um dos primeiros sucessos de Shakira, que a lançou internacionalmente.</p>
+                                        <audio id="audio16" src="./musicas/Anos 90/Shakira - Estoy Aquí.mp4"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio16', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 90/Shakira - Estoy Aquí.mp4" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos90/Roxette.jpg" class="card-img-top m-2" alt="It Must Have Been Love">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">It Must Have Been Love</h5>
+                                        <p class="card-text">Um dos maiores sucessos de Roxette, famoso pela trilha sonora do filme "Uma Linda Mulher".</p>
+                                        <audio id="audio17" src="./musicas/Anos 90/Roxette - It Must Have Been Love.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio17', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 90/Roxette - It Must Have Been Love.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos90/Oasis.jpg" class="card-img-top m-2" alt="Wonderwall">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Wonderwall</h5>
+                                        <p class="card-text">Um dos maiores sucessos da banda Oasis, conhecido por sua melodia cativante e letra reflexiva.</p>
+                                        <audio id="audio18" src="./musicas/Anos 90/Oasis - Wonderwall.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio18', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 90/Oasis - Wonderwall.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Adicione mais itens conforme necessário -->
+    
+                </div>
+    
+                <div class="carousel-controls">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMusicasAnos90" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselMusicasAnos90" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+    
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMusicasAnos90" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos90" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos90" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos90" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos90" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos90" data-bs-slide-to="5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id="anos2000">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Anos 2000</h2>
+            <p class="section-description text-center mb-4">A seção "Anos 2000" apresenta uma coleção de músicas que marcaram a virada do milênio, capturando a energia e diversidade da cultura musical da época. De hits pop contagiantes a baladas emocionantes, cada música reflete o espírito vibrante e as tendências musicais da década de 2000. Com artistas como Coldplay, Rihanna, U2, Beyoncé, Maroon 5 e Lady Gaga, esta seleção oferece uma viagem pelos sucessos que ecoaram nas rádios e nas mentes dos fãs durante essa era dinâmica da música.</p>
+            <div id="carouselMusicasAnos2000" class="carousel slide" >
+                <div class="carousel-inner">
+    
+                    <div class="carousel-item active" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos2000/Viva la Vida.jpg" class="card-img-top m-2" alt="Viva la Vida">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Viva la Vida</h5>
+                                        <p class="card-text">Um dos sucessos mais populares da banda Coldplay, conhecido por sua melodia vibrante e letra inspiradora.</p>
+                                        <audio id="audio19" src="./musicas/Anos 2000/Coldplay - Viva la Vida.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio19', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2000/Coldplay - Viva la Vida.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos2000/Rihanna.jpg" class="card-img-top m-2" alt="Umbrella">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Umbrella</h5>
+                                        <p class="card-text">Um dos grandes sucessos de Rihanna, com participação de Jay-Z, conhecido por seu refrão cativante e batida envolvente.</p>
+                                        <audio id="audio20" src="./musicas/Anos 2000/Rihanna feat. Jay-Z - Umbrella.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio20', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2000/Rihanna feat. Jay-Z - Umbrella.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos2000/U2_-_Beautiful_Day.jpg" class="card-img-top m-2" alt="Beautiful Day">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Beautiful Day</h5>
+                                        <p class="card-text">Um dos sucessos mais conhecidos da banda U2, celebrando a beleza da vida e da natureza.</p>
+                                        <audio id="audio21" src="./musicas/Anos 2000/U2 - Beautiful Day.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio21', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2000/U2 - Beautiful Day.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos2000/Bey.jpg" class="card-img-top m-2" alt="Crazy in Love">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Crazy in Love</h5>
+                                        <p class="card-text">Um dos maiores hits de Beyoncé, com participação de Jay-Z, caracterizado por sua energia contagiante e vocais poderosos.</p>
+                                        <audio id="audio22" src="./musicas/Anos 2000/Beyoncé feat.Jay-Z - Crazy in Love.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio22', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2000/Beyoncé feat.Jay-Z - Crazy in Love.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos2000/Maroon5.jpg" class="card-img-top m-2" alt="This Love">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">This Love</h5>
+                                        <p class="card-text">Um dos primeiros sucessos da banda Maroon 5, conhecido por sua batida cativante e letras emocionais.</p>
+                                        <audio id="audio23" src="./musicas/Anos 2000/Maroon 5 - This Love.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio23', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2000/Maroon 5 - This Love.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/anos2000/BadRomance.jpg" class="card-img-top m-2" alt="Bad Romance">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Bad Romance</h5>
+                                        <p class="card-text">Um dos sucessos icônicos de Lady Gaga, conhecido por sua produção extravagante e letras provocativas.</p>
+                                        <audio id="audio24" src="./musicas/Anos 2000/Lady Gaga - Bad Romance.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio24', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2000/Lady Gaga - Bad Romance.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Adicione mais itens conforme necessário -->
+    
+                </div>
+    
+                <div class="carousel-controls">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMusicasAnos2000" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselMusicasAnos2000" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+    
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMusicasAnos2000" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2000" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2000" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2000" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2000" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2000" data-bs-slide-to="5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="anos2010">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Anos 2010</h2>
+            <p class="section-description text-center mb-4">A seção "Anos 2010" apresenta uma coleção de músicas que definiram a década, refletindo a diversidade e a evolução da música durante esse período. Com artistas como Rihanna, Katy Perry, Taylor Swift, Adele e Lady Gaga, cada música captura uma parte do clima cultural dos anos 2010, desde os hits dançantes até as baladas emocionais. Explore esta seleção para reviver os momentos musicais mais memoráveis ​​da década passada.</p>
+            <div id="carouselMusicasAnos2010" class="carousel slide">
+                <div class="carousel-inner">
+    
+                    <div class="carousel-item active" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Anos 2010/Diamonds.jpg" class="card-img-top m-2" alt="Diamonds">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Diamonds</h5>
+                                        <p class="card-text">Um dos sucessos de Rihanna, caracterizado por sua produção poderosa e letra cativante.</p>
+                                        <audio id="audio25" src="./musicas/Anos 2010/Rihanna - Diamonds.mp4"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio25', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2010/Rihanna - Diamonds.mp4" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Anos 2010/Katy.jpg" class="card-img-top m-2" alt="Last Friday Night">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Last Friday Night</h5>
+                                        <p class="card-text">Um dos hits de Katy Perry, conhecido por sua vibe festiva e letras divertidas.</p>
+                                        <audio id="audio26" src="./musicas/Anos 2010/Katy Perry feat. Missy Elliott - Last Friday Night.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio26', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2010/Katy Perry feat. Missy Elliott - Last Friday Night.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Anos 2010/Taylor.jpg" class="card-img-top m-2" alt="Blank Space">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Blank Space</h5>
+                                        <p class="card-text">Um dos sucessos de Taylor Swift, caracterizado por sua produção impecável e letra inteligente.</p>
+                                        <audio id="audio27" src="./musicas/Anos 2010/Taylor Swift - Blank Space.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio27', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2010/Taylor Swift - Blank Space.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Anos 2010/Adele.jpg" class="card-img-top m-2" alt="Send My Love (To Your New Lover)">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Send My Love (To Your New Lover)</h5>
+                                        <p class="card-text">Uma das músicas de sucesso de Adele, conhecida por sua melodia envolvente e vocais poderosos.</p>
+                                        <audio id="audio28" src="./musicas/Anos 2010/Adele - Send my love (To Your New Lover).mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio28', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2010/Adele - Send my love (To Your New Lover).mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Anos 2010/MillionReasons.jpg" class="card-img-top m-2" alt="Million Reasons">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Million Reasons</h5>
+                                        <p class="card-text">Um dos sucessos de Lady Gaga, conhecido por suas letras emocionais e melodia cativante.</p>
+                                        <audio id="audio29" src="./musicas/Anos 2010/Lady Gaga - Million Reasons.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio29', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2010/Lady Gaga - Million Reasons.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item" >
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card m-3">
+                                    <img src="./images/images-musicas/Anos 2010/220px-Lady_Gaga_&_Bradley_Cooper_-_Shallow.png" class="card-img-top m-2" alt="Shallow">
+                                    <div class="card-body">
+                                        <h5 class="card-title mt-4">Shallow</h5>
+                                        <p class="card-text">Um dos sucessos da trilha sonora de "Nasce Uma Estrela", conhecido pela poderosa performance vocal de Lady Gaga e Bradley Cooper.</p>
+                                        <audio id="audio30" src="./musicas/Anos 2010/Lady Gaga feat. Bradley Cooper - Shallow.mpeg"></audio>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn mx-2" onclick="toggleAudio('audio30', this, event)">Ouça</button>
+                                            <a href="./musicas/Anos 2010/Lady Gaga feat. Bradley Cooper - Shallow.mpeg" class="btn">Baixe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Adicione mais itens conforme necessário -->
+    
+                </div>
+    
+                <div class="carousel-controls">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMusicasAnos2010" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselMusicasAnos2010" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+    
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMusicasAnos2010" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2010" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2010" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2010" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2010" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#carouselMusicasAnos2010" data-bs-slide-to="5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section>
+        <div class="text-center mt-5 spotify">
+            <p>Se você gostou da nossa seleção de músicas, confira mais na nossa biblioteca do Spotify:</p>
+            <a href="https://open.spotify.com/user/12178904926" target="_blank">
+                <i class="fab fa-spotify" style="font-size: 50px;"></i>
+            </a>
+        </div>
+    </section>
+    
+</div>
+
+<footer class="footer  p-4">
+    <div class="text-center">
+        <span class="text-muted">© 2024 Cultura Viva. Todos os direitos reservados.</span>
+    </div>
+</footer>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Inicializar os carrosséis
+        var musicasCarousel = new bootstrap.Carousel(document.getElementById('carouselMusicas'));
+        var anos80Carousel = new bootstrap.Carousel(document.getElementById('carouselMusicasAnos80'));
+        var anos90Carousel = new bootstrap.Carousel(document.getElementById('carouselMusicasAnos90'));
+        var anos2000Carousel = new bootstrap.Carousel(document.getElementById('carouselMusicasAnos2000'));
+        var anos2010Carousel = new bootstrap.Carousel(document.getElementById('carouselMusicasAnos2010'));
+    });
+</script>
+
+
+<script>
+    var currentAudio = null;
+
+    function toggleAudio(audioId, button) {
+      var audio = document.getElementById(audioId);
+
+      if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause();
+        if (currentAudio !== button) {
+          togglePlayPauseButton(currentAudio, 'play');
+        }
+      }
+
+      if (audio.paused) {
+        audio.play();
+        togglePlayPauseButton(button, 'pause');
+      } else {
+        audio.pause();
+        togglePlayPauseButton(button, 'play');
+      }
+
+      currentAudio = audio;
+    }
+
+    function togglePlayPauseButton(button, action) {
+      button.innerHTML = (action === 'pause') ? 'Pausar' : 'Ouça';
+    }
+  </script>
+
+
+
+
+
+</body>
+</html>

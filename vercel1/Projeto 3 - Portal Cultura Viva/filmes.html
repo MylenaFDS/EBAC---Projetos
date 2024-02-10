@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes - Cultura Viva</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .carousel-controls {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            font-size: 2rem;
+        }
+    
+        
+    .carousel-indicators {
+        /* Defina a largura para ocupar toda a largura do carrossel */
+        display: flex;
+        justify-content: center; /* Centraliza os indicadores horizontalmente */
+        position: absolute; /* Posiciona os indicadores em relação ao elemento pai */
+        bottom: 40px; /* Posicione os indicadores na parte inferior do carrossel */
+        margin-bottom: 10px; /* Adicione margem inferior para dar espaço ao último botão */
+    }
+
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ccc;
+        transition: background-color 0.3s ease;
+        margin: 0 5px; /* Adicione margem entre os indicadores */
+    }  
+
+    .carousel-indicators button.active {
+    background-color: #c21496;
+    }
+
+   
+
+    
+        .mt-3.text-center {
+            position: relative;
+            top: 20%;
+        }
+
+        #carousel-classicos-filmes .carousel-inner .card video {
+        height: 700px; /* Ajuste o valor conforme necessário */
+        object-fit: cover; /* Garante que o vídeo cubra completamente o contêiner */
+    }
+    </style>
+    
+</head>
+<body>
+
+<header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+    <div class="container">
+        <h1 class="navbar-brand m-0 section-title">Cultura Viva</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+            <ul class="nav nav-pills d-block d-md-flex">
+                <li class="nav-item fw-bold">
+                    <a href="index.html" class="nav-link">
+                        <i class="bi bi-house-door me-1"></i>
+                        Início
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="musicas.html" class="nav-link">
+                        <i class="bi bi-music-note me-1"></i>
+                        Música
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="livros.html" class="nav-link">
+                        <i class="bi bi-book me-1"></i>
+                        Livros
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="filmes.html" class="nav-link">
+                        <i class="bi bi-film me-1"></i>
+                        Filmes
+                    </a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="index.html#fale-conosco" class="nav-link">
+                        <i class="bi bi-chat-left-text me-1"></i>
+                        Fale conosco
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-offset="0" tabindex="0">
+    <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="images/CulturaViva.png" alt="Foto do espaço cultural">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Musics.png" alt="Música">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Books.png" alt="Livros">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/Movies.jpg" alt="Filmes">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+        </div>
+    </div>
+    <section id="filmes" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="images/Movies.jpg" class="d-block w-100 rounded" alt="Foto de um espaço cultural">
+                </div>
+                <div class="col-md-7 mt-5 mt-md-0">
+                    <h2 class="section-title text-center mb-4">Filmes</h2>
+                    <p>
+                        Bem-vindo à seção de filmes do Cultura Viva. Aqui você encontrará uma seleção de filmes que abrangem uma variedade de gêneros e estilos cinematográficos.
+                    </p>
+                    <p>
+                        Explore nossa coleção de filmes que vão desde clássicos do cinema até as últimas produções contemporâneas. Há algo para todos os gostos e interesses, seja você fã de drama, comédia, ação, suspense ou romance.
+                    </p>
+                    <p>
+                        Cada filme é acompanhado por uma breve descrição que o ajudará a decidir qual assistir. Além disso, fornecemos informações sobre onde você pode assistir aos filmes, seja em cinemas, plataformas de streaming ou adquirindo cópias físicas.
+                    </p>
+                    <p>
+                        Desfrute da experiência cinematográfica e deixe-se envolver por histórias emocionantes, personagens cativantes e momentos inesquecíveis que o cinema tem a oferecer. Esta seção é projetada para enriquecer sua experiência cultural e proporcionar entretenimento para todas as ocasiões.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seção de Clássicos de Filmes -->
+    <section id="classicos-filmes" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title text-center mb-4">Clássicos do Cinema</h2>
+                    <p class="text-center">Explore alguns dos maiores clássicos da história do cinema.</p>
+                </div>
+            </div>
+            <!-- Carrossel de Cards -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carousel-classicos-filmes" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Primeiro Slide -->
+                            <div class="carousel-item active">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Casablanca - Trailer Legendado (480p).mp4" controls class="card-img-top" alt="Casablanca"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Casablanca</h5>
+                                            <p class="card-text">Casablanca é um filme americano de 1942 dirigido por Michael Curtiz e estrelado por Humphrey Bogart, Ingrid Bergman, Paul Henreid e Claude Rains.</p>
+                                            <a href="https://www.youtube.com/watch?v=fyt4wgE1hT4" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Segundo Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/CHARLIE CHAPLIN - O GRANDE DITADOR (TRAILER E FILME COMPLETO LEGENDADO) (240p).mp4" controls class="card-img-top" alt="O Grande Ditador"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">O Grande Ditador</h5>
+                                            <p class="card-text">O Grande Ditador é um filme de 1940 escrito, dirigido e estrelado por Charlie Chaplin.</p>
+                                            <a href="https://www.youtube.com/watch?v=pHZ46sQkzqU" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Terceiro Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/O Mágico de Oz - Trailer (720p).mp4" controls class="card-img-top" alt="O Mágico de Oz"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">O Mágico de Oz</h5>
+                                            <p class="card-text">O Mágico de Oz é um filme americano de 1939, baseado no livro infantil de mesmo nome de L. Frank Baum, dirigido por Victor Fleming.</p>
+                                            <a href="https://playfilmes.org/filmes/o-magico-de-oz/" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controles do Carrossel -->
+                        <div class="carousel-controls">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-classicos-filmes" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-classicos-filmes" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                            
+                    </div>
+                        <!-- Indicadores do Carrossel -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-classicos-filmes" class="active" data-bs-slide-to="0"></button>
+                            <button type="button" data-bs-target="#carousel-classicos-filmes" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carousel-classicos-filmes" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <a href="https://www.youtube.com/playlist?list=PL7E5FCDAE6943D803" class="btn" target="_blank">Clique aqui para ver mais clássicos!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="filmes-acao" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title text-center mb-4">Filmes de Ação</h2>
+                    <p class="text-center">Explore alguns dos melhores filmes de ação.</p>
+                </div>
+            </div>
+            <!-- Carrossel de Cards -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carousel-filmes-acao" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Primeiro Slide -->
+                            <div class="carousel-item active">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Terminator 2 Judgment Day 1991 Trailer.mp4" controls class="card-img-top" alt="Exterminador do Futuro 2: O Julgamento Final"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Exterminador do Futuro 2: O Julgamento Final</h5>
+                                            <p class="card-text">Exterminador do Futuro 2: O Julgamento Final é um filme de ação e ficção científica de 1991, dirigido por James Cameron e estrelado por Arnold Schwarzenegger, Linda Hamilton, Edward Furlong e Robert Patrick.</p>
+                                            <a href="https://redecanais.zip/o-exterminador-do-futuro-2-o-julgamento-final-dublado-1991-1080p_a92880624.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Segundo Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Die Hard - 1988 - Trailer.mp4" controls class="card-img-top" alt="Duro de Matar"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Duro de Matar</h5>
+                                            <p class="card-text">Duro de Matar é um filme de ação de 1988, dirigido por John McTiernan e estrelado por Bruce Willis, Alan Rickman, Alexander Godunov e Bonnie Bedelia.</p>
+                                            <a href="https://redecanais.zip/duro-de-matar-dublado-1988-720p_d3d7e7722.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Terceiro Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Mad Max - Trailer (1979).mp4" controls class="card-img-top" alt="Mad Max"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Mad Max</h5>
+                                            <p class="card-text">Mad Max é um filme de ação australiano de 1979, dirigido por George Miller e estrelado por Mel Gibson.</p>
+                                            <a href="https://redecanais.zip/mad-max-dublado-1979-1080p_49e7cb3a1.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controles do Carrossel -->
+                        <div class="carousel-controls">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-filmes-acao" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-filmes-acao" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                            
+                    </div>
+                        <!-- Indicadores do Carrossel -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-filmes-acao" class="active" data-bs-slide-to="0"></button>
+                            <button type="button" data-bs-target="#carousel-filmes-acao" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carousel-filmes-acao" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <a href="https://redecanais.zip/browse-acao-filmes-videos-1-date.html" class="btn" target="_blank">Veja mais filmes de ação!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="filmes-suspense" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title text-center mb-4">Filmes de Suspense</h2>
+                    <p class="text-center">Explore alguns dos maiores clássicos do gênero suspense.</p>
+                </div>
+            </div>
+            <!-- Carrossel de Cards -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carousel-filmes-suspense" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Primeiro Slide -->
+                            <div class="carousel-item active">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Psycho - Trailer (1960).mp4" controls class="card-img-top" alt="Psicose"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Psicose</h5>
+                                            <p class="card-text">Psicose é um filme de suspense de 1960 dirigido por Alfred Hitchcock e estrelado por Anthony Perkins, Janet Leigh e Vera Miles.</p>
+                                            <a href="https://redecanais.zip/psicose-dublado-1960-1080p_6a5dca074.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Segundo Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/The Silence of the Lambs - Trailer (1991).mp4" controls class="card-img-top" alt="O Silêncio dos Inocentes"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">O Silêncio dos Inocentes</h5>
+                                            <p class="card-text">O Silêncio dos Inocentes é um filme de suspense de 1991 dirigido por Jonathan Demme e estrelado por Jodie Foster, Anthony Hopkins e Scott Glenn.</p>
+                                            <a href="https://redecanais.zip/o-silencio-dos-inocentes-dublado-1991-1080p_da55f9011.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Terceiro Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Seven - Trailer.mp4" controls class="card-img-top" alt="Se7en: Os Sete Crimes Capitais"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Se7en: Os Sete Crimes Capitais</h5>
+                                            <p class="card-text">Seven: Os Sete Crimes Capitais é um filme de suspense de 1995 dirigido por David Fincher e estrelado por Brad Pitt e Morgan Freeman.</p>
+                                            <a href="https://redecanais.zip/se7en-os-sete-crimes-capitais-dublado-1995-1080p_ffe37a48a.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Controles do Carrossel -->
+                        <div class="carousel-controls">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-filmes-suspense" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-filmes-suspense" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                            
+                    </div>
+                        <!-- Indicadores do Carrossel -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-filmes-suspense" class="active" data-bs-slide-to="0"></button>
+                            <button type="button" data-bs-target="#carousel-filmes-suspense" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carousel-filmes-suspense" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <a href="https://redecanais.zip/browse-suspense-filmes-videos-1-date.html" class="btn" target="_blank">Veja mais filmes de suspense!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="filmes-romance" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title text-center mb-4">Filmes de Romance</h2>
+                    <p class="text-center">Explore alguns dos maiores clássicos do gênero romance.</p>
+                </div>
+            </div>
+            <!-- Carrossel de Cards -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carousel-filmes-romance" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Primeiro Slide -->
+                            <div class="carousel-item active">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Diario_de_uma_Paixao_Trailer.mp4" controls class="card-img-top" alt="Diário de uma Paixão"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Diário de uma Paixão</h5>
+                                            <p class="card-text">Diário de uma Paixão é um filme de romance de 2004 dirigido por Nick Cassavetes e estrelado por Ryan Gosling e Rachel McAdams.</p>
+                                            <a href="https://redecanais.zip/diario-de-uma-paixao-dublado-2004-720p_eacc874b6.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Segundo Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Um Lugar Chamado Notting Hill - Trailer (1999).mp4" controls class="card-img-top" alt="Um Lugar Chamado Notting Hill"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Um Lugar Chamado Notting Hill</h5>
+                                            <p class="card-text">Um Lugar Chamado Notting Hill é um filme de romance de 1999 dirigido por Roger Michell e estrelado por Julia Roberts e Hugh Grant.</p>
+                                            <a href="https://redecanais.zip/um-lugar-chamado-notting-hill-dublado-1999-1080p_14ce30a55.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Terceiro Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Um Amor para Recordar - Trailer (2002).mp4" controls class="card-img-top" alt="Um Amor para Recordar"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Um Amor para Recordar</h5>
+                                            <p class="card-text">Um Amor para Recordar é um filme de romance de 2002 dirigido por Adam Shankman e estrelado por Mandy Moore e Shane West.</p>
+                                            <a href="https://redecanais.zip/um-amor-para-recordar-dublado-2002-1080p_e185f2b87.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controles do Carrossel -->
+                        <div class="carousel-controls">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-filmes-romance" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-filmes-romance" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                            
+                    </div>
+                        <!-- Indicadores do Carrossel -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-filmes-romance" class="active" data-bs-slide-to="0"></button>
+                            <button type="button" data-bs-target="#carousel-filmes-romance" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carousel-filmes-romance" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <a href="https://redecanais.zip/browse-romance-filmes-videos-2-date.html" class="btn" target="_blank">Veja mais filmes de romance!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="filmes-comedia" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title text-center mb-4">Filmes de Comédia</h2>
+                    <p class="text-center">Confira alguns dos melhores filmes de comédia.</p>
+                </div>
+            </div>
+            <!-- Carrossel de Cards -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carousel-filmes-comedia" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Primeiro Slide -->
+                            <div class="carousel-item active">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Diabo Veste Prada Trailer.mp4" controls class="card-img-top" alt="O Diabo Veste Prada"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">O Diabo Veste Prada</h5>
+                                            <p class="card-text">O Diabo Veste Prada é um filme de comédia de 2006 dirigido por David Frankel e estrelado por Meryl Streep e Anne Hathaway.</p>
+                                            <a href="https://redecanais.zip/o-diabo-veste-prada-dublado-2006-1080p_c334b5417.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Segundo Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Click - Trailer (720p).mp4" controls class="card-img-top" alt="Click"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Click</h5>
+                                            <p class="card-text">Click é um filme de comédia de 2006 dirigido por Frank Coraci e estrelado por Adam Sandler, Kate Beckinsale e Christopher Walken.</p>
+                                            <a href="https://redecanais.zip/click-dublado-2006-720p_d97ba5b5c.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Terceiro Slide -->
+                            <div class="carousel-item">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+                                    <div class="card m-3">
+                                        <div class="card-body">
+                                            <video src="./trailers/Gente Grande - Trailer (720p).mp4" controls class="card-img-top" alt="Gente Grande"></video>
+                                            <div class="play-overlay">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                            <h5 class="card-title mt-4">Gente Grande</h5>
+                                            <p class="card-text">Gente Grande é um filme de comédia de 2010 dirigido por Dennis Dugan e estrelado por Adam Sandler, Kevin James, Chris Rock, David Spade e Rob Schneider.</p>
+                                            <a href="https://redecanais.zip/gente-grande-dublado-2010-1080p-video_e2e572463.html" class="btn">Assista</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controles do Carrossel -->
+                        <div class="carousel-controls">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-filmes-comedia" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-filmes-comedia" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                        </div>
+                        <!-- Indicadores do Carrossel -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-filmes-comedia" class="active" data-bs-slide-to="0"></button>
+                            <button type="button" data-bs-target="#carousel-filmes-comedia" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carousel-filmes-comedia" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <a href="https://redecanais.zip/browse-comedia-filmes-videos-1-date.html" class="btn" target="_blank">Veja mais filmes de comédia!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="text-center mt-5 film">
+            <p>Se você gostou da nossa seleção de filmes, confira mais no link:</p>
+            <a href="https://redecanais.zip/browse-filmes-videos-1-date.html" target="_blank">
+                <i class="bi bi-film" style="font-size: 50px;"></i>
+            </a>
+        </div>
+    </section>
+    
+</div>
+
+<footer class="footer  p-4">
+    <div class="text-center">
+        <span class="text-muted">© 2024 Cultura Viva. Todos os direitos reservados.</span>
+    </div>
+</footer>
+    
+    
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const videos = document.querySelectorAll("video");
+
+        let currentVideo = null;
+
+        videos.forEach(function(video) {
+            const playOverlay = video.parentElement.querySelector(".play-overlay");
+            const playButton = video.parentElement.querySelector(".fa-play");
+
+            playOverlay.addEventListener("click", function() {
+                togglePlay(video, playOverlay);
+            });
+
+            playButton.addEventListener("click", function(event) {
+                event.stopPropagation();
+                togglePlay(video, playOverlay);
+            });
+
+            video.addEventListener("click", function() {
+                togglePlay(video, playOverlay);
+            });
+
+            // Desativar os controles padrão do vídeo
+            video.removeAttribute("controls");
+
+            video.addEventListener("play", function() {
+                if (currentVideo && currentVideo !== video) {
+                    currentVideo.pause();
+                    currentVideo.parentElement.querySelector(".play-overlay").style.display = "block";
+                }
+                currentVideo = video;
+            });
+        });
+
+        function togglePlay(video, playOverlay) {
+            if (video.paused) {
+                video.play();
+                playOverlay.style.display = "none";
+            } else {
+                video.pause();
+                playOverlay.style.display = "block";
+            }
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* Define as cores principais */
+:root {
+    --cor-primaria: #c21496; /* Rosa vibrante */
+    --cor-secundaria: #f9f7f7; /* Branco gelo */
+}
+
+/* Define as fontes padrão e as cores de fundo e texto */
+body {
+    font-family: 'Pacifico', cursive;
+    background-color: var(--cor-secundaria);
+    color: #343a40; /* Tom de cinza escuro para o texto */
+    overflow-x: hidden;
+}
+
+/* Define a fonte e a cor para todos os títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico', cursive;
+    color: var(--cor-primaria); /* Título em rosa vibrante */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Estilo dos links no cabeçalho */
+header a {
+    color: #ffffff;
+}
+
+#cabecalho .nav .nav-link.active {
+    background-color: #fff;
+    color:  #e4b8da; 
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover {
+    color: #fff;
+    font-size: 15px;
+}
+
+/* Estilo das imagens no carrossel */
+.carousel-item img {
+    width: 100%;
+    height: 700px; /* Altura desejada para as imagens do carrossel */
+    object-fit: cover; /* Estica a imagem para cobrir todo o espaço disponível */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Garante que as setas estejam sobre as imagens */
+    color: #c21496;
+}
+
+.carousel-control-prev {
+    left: -50px; /* Ajusta a posição da seta esquerda */
+}
+
+.carousel-control-next {
+    right: -50px; /* Ajusta a posição da seta direita */
+}
+
+#carousel-classicos-filmes .carousel-inner .col-lg-12 {
+    margin-right: 15px; /* Ajuste o valor conforme necessário */
+    margin-left: 15px;  /* Ajuste o valor conforme necessário */
+}
+
+.carousel-inner .card img {
+    width: auto; /* Ajuste o valor conforme necessário */
+    object-fit: cover;
+}
+
+/* Estilo das seções */
+section{
+    background-color: #e4b8da; 
+    padding: 30px;
+   
+}
+
+/* Estilo dos títulos das seções */
+section h2 {
+    color: var(--cor-primaria); /* Título em rosa vibrante */
+}
+
+/* Estilo do texto das seções */
+section p {
+    color: #6c757d; /* Tom de cinza para o texto */
+    font-size: 15px;
+}
+
+/* Estilo dos links nas seções */
+section a {
+    color: var(--cor-primaria); /* Links em rosa vibrante */
+}
+
+/* Estilo dos links nas seções quando passa o mouse por cima */
+section a:hover {
+    color: #007bff; /* Azul suave ao passar o mouse */
+}
+
+.spotify a:hover{
+    color: #1DB954;
+}
+
+.film a:hover{
+    color: black;
+}
+.btn, .btn:hover{
+    background-color: #c21496;
+    color:#fff;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+label,footer{
+    font-family: 'Pacifico', cursive;
+    font-size: large;
+    color: #c21496;
+}
+
+footer {
+    background-color: #c21496;
+    font-family: 'Pacifico', cursive;
+    font-size: large;
+    color: #c21496;
+}
+
+
+
+
+.custom-background {
+    background-color: #e4b8da;
+    /* Adicione outros estilos personalizados aqui, se necessário */
+}
+
+.play-overlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Adicionando cursor pointer para indicar que é clicável */
+}
+
+.play-overlay i {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.play-overlay:hover {
+    background: transparent; /* Mudando a opacidade do fundo ao passar o mouse */
+}
+
+.carousel-item .col-lg-12,
+.carousel-item .col-md-12,
+.carousel-item .col-sm-12 {
+    max-width: 100%; /* Certifique-se de que os vídeos ocupem toda a largura do carrossel */
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 767px) {
+    /* Reduz a altura das imagens do carrossel */
+    .carousel-item img {
+        height: 280px;
+    }
+
+    .carousel-item .col-lg-12,
+    .carousel-item .col-md-12,
+    .carousel-item .col-sm-12 {
+        max-width: 100%; /* Ajuste a largura máxima dos vídeos para ocupar toda a largura do carrossel */
+       
+    }
+}
+
