@@ -1,0 +1,4 @@
+{
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}${separator}[Branch: exercicio_agenda_de_contatos]",
+  "markdown-preview-enhanced.previewColorScheme": "editorColorScheme"
+}

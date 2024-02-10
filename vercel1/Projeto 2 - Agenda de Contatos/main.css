@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #19f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #eb9bcc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #ffd700;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    color: gold;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: blueviolet;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#contactList {
+    margin-top: 20px;
+}
+
+#contactTable th,
+#contactTable td {
+    padding: 10px; /* Adicione espaçamento aqui */
+    text-align: center;
+}
+
+#contactItems {
+    list-style-type: none;
+}
+
+#contactItems li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+th {
+    color: blueviolet;
+}
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+#contactTable {
+    flex: 0 0 100%; /* Ajuste a largura conforme necessário */
+}
+
+#errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

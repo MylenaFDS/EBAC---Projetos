@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Agenda de Contatos</h2>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="text" id="phone" name="phone" placeholder="Telefone" required>
+            </div>
+
+            <button type="button" onclick="addContact()">Cadastrar</button>
+            <p id="errorMessage" class="failure-message"></p>
+        </form>
+
+        <div id="contactList">
+            <h3>Lista de Contatos</h3>
+            <div class="table-container">
+                <table id="contactTable">
+                    <thead>
+                        <tr>
+                            <th style="color: blueviolet; text-align: center;">Nome</th>
+                            <th style="color: blueviolet; text-align: center;">Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contactItems"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
